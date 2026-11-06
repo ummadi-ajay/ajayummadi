@@ -1,0 +1,22 @@
+# Ajay Ummadi
+
+> Entrepreneur and technologist in India. Founder and Managing Partner of MakerWorks Lab (robotics and Physical AI maker space, Malad East, Mumbai) since March 2025. Contributor to Hugging Face's open-source LeRobot library.
+
+Canonical page: https://makerworkslab.in/ajayummadi/
+
+## Projects
+- SO-101 Teleoperation Studio: local web dashboard and Three.js 3D digital twin for SO-101 leader/follower robot arm teleoperation on top of LeRobot (60 Hz loop, telemetry, CSV recording, calibration manager). Separate add-on, not endorsed by LeRobot. Backend and 3D twin written with Claude Code; UI redesign and product direction by Ajay Ummadi. https://makerworkslab.in/ajayummadi/#studio
+- Open-Ear Wired Earbuds: parametric Blender Python design for 3D-printed wired open-ear earphones around a salvaged driver, plus a cable-reel case. Both ears printed and worn; sound quality and case not yet tested. https://makerworkslab.in/ajayummadi/#earbuds
+- LeRobot Training Monitor: live terminal dashboard for lerobot-train (progress, ETA, loss and gradient-norm plots), about 280 lines of Python.
+
+## Background
+- Associate Consultant, Atos Syntel (Oct 2022 - Aug 2023)
+- Education: Osmania University; Acharya Nagarjuna University
+- Languages: Telugu, Hindi, English
+
+## Links
+- LinkedIn: https://www.linkedin.com/in/ajayummadi/
+- YouTube: https://www.youtube.com/@MakerWorkslab
+- GitHub: https://github.com/ummadi-ajay
+- MakerWorks Lab: https://makerworkslab.in/
+- Contact: makerworkslab@gmail.com
