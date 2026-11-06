@@ -7,13 +7,14 @@ h1,h2,h3,.logo{font-family:'Space Grotesk',Inter,sans-serif}
 a{color:inherit}
 .wrap{max-width:1020px;margin:0 auto;padding:0 20px;position:relative}
 /* animated background */
-.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
-.bg i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;animation:float 18s ease-in-out infinite}
-.bg i:nth-child(1){width:520px;height:520px;background:var(--a);top:-120px;left:-100px}
-.bg i:nth-child(2){width:480px;height:480px;background:var(--c);top:30%;right:-140px;animation-delay:-6s}
-.bg i:nth-child(3){width:420px;height:420px;background:var(--b);bottom:-120px;left:30%;animation-delay:-12s}
-.bg::after{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 75%)}
-@keyframes float{50%{transform:translate(40px,50px) scale(1.1)}}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:
+ radial-gradient(1100px 600px at 50% -10%,color-mix(in srgb,var(--b) 22%,transparent),transparent 70%),
+ radial-gradient(700px 500px at 105% 55%,color-mix(in srgb,var(--c) 16%,transparent),transparent 70%),
+ radial-gradient(700px 500px at -5% 90%,color-mix(in srgb,var(--a) 14%,transparent),transparent 70%)}
+.bg i{display:none}
+.bg::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.55;mask-image:radial-gradient(ellipse 80% 70% at 50% 35%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 35%,#000 20%,transparent 75%)}
+.bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,var(--bg) 100%)}
+.bg canvas{position:absolute;inset:0;width:100%;height:100%}
 /* nav */
 nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
