@@ -20,7 +20,7 @@ Canonical page: https://makerworkslab.in/ajayummadi/
 - Web apps and tools (all on GitHub, github.com/ummadi-ajay): EduBill student billing app (React, Firebase), Transaction Ledger finance app (React, Capacitor, Gemini), Nexus Control micro:bit robot dashboard (Web Bluetooth), MakerWorks Lab website, Electronics Component and Kit Tracker, classroom tools (scoreboard, Arduino quiz, attendance).
 
 ## Background
-- 2024: learned Java; capstone project: a web app to buy and resell books (Java, SQL)
+- Sep 2023 to Aug 2024: learned Java; capstone project: a web app to buy and resell books (Java, SQL)
 - Associate Consultant, Atos Syntel (Oct 2022 - Aug 2023): Java full-stack training; completed Microsoft Azure Fundamentals (AZ-900)
 - Education: MCA (Computer Science), Krishna University, April 2019 to March 2022
 - Languages: Telugu, Hindi, English
