@@ -102,3 +102,5 @@ nav{background:rgba(255,255,255,.82)}
 
 .xp{margin:12px 0 0;padding-left:20px;color:var(--muted);font-size:.95rem;display:grid;gap:6px}
 .xp a{color:var(--b)}
+
+.lab{margin:0 0 24px;max-width:560px}.lab img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}.lab figcaption{color:var(--muted);font-size:.85rem;margin-top:8px}
