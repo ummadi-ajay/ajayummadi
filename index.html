@@ -208,9 +208,8 @@
 
 <header class="hero" id="top"><div class="wrap">
 <div>
-<span class="tag">Building in Mumbai, India</span>
-<h1>Hi, I'm <span class="grad">Ajay Ummadi</span></h1>
-<p class="role">Founder · <b id="typed">Robotics</b></p>
+<h1>Ajay Ummadi</h1>
+<p class="role">Founder of MakerWorks Lab, Mumbai. I build robots and teach people to build them.</p>
 <p class="lead">Founder and Managing Partner of MakerWorks Lab, a space where people learn robotics, Physical AI and hands-on hardware engineering. I build with Hugging Face's open-source LeRobot.</p>
 <div class="btns">
 <a class="btn primary" href="https://makerworkslab.in/" target="_blank" rel="noopener">Visit MakerWorks Lab →</a>
@@ -218,31 +217,13 @@
 <a class="btn" href="#contact">Get in touch</a>
 </div>
 </div>
-<div class="avatar" aria-hidden="true">
-<svg viewBox="0 0 240 260" fill="none">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#34d399"/><stop offset=".5" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
-<line x1="120" y1="14" x2="120" y2="44" stroke="url(#g)" stroke-width="4"/><circle cx="120" cy="12" r="8" fill="url(#g)"/>
-<rect x="38" y="44" width="164" height="120" rx="36" fill="#0d1424" stroke="url(#g)" stroke-width="4"/>
-<rect x="60" y="72" width="120" height="62" rx="22" fill="#060a14"/>
-<ellipse class="eye" cx="94" cy="103" rx="13" ry="16" fill="url(#g)"/><ellipse class="eye" cx="146" cy="103" rx="13" ry="16" fill="url(#g)"/>
-<path d="M104 146q16 10 32 0" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
-<rect x="18" y="82" width="14" height="44" rx="7" fill="url(#g)"/><rect x="208" y="82" width="14" height="44" rx="7" fill="url(#g)"/>
-<rect x="76" y="176" width="88" height="68" rx="20" fill="#0d1424" stroke="url(#g)" stroke-width="4"/>
-<circle cx="120" cy="210" r="11" fill="url(#g)" opacity=".85"/>
-</svg>
-</div>
+<figure class="heroimg"><img src="lab-desk.jpg" width="1000" height="750" fetchpriority="high" alt="Ajay Ummadi working at his desk in the MakerWorks Lab, with a Reachy Mini robot, a humanoid robot and SO-101 robot arms beside the monitor"></figure>
 </div></header>
 
-<div class="wrap"><div class="stats rv">
-<div class="stat"><b>2025</b><span>Founded MakerWorks Lab</span></div>
-<div class="stat"><b>4</b><span>Competitions: WRO, VEX IQ, Coolest Projects, Mekathlon</span></div>
-<div class="stat"><b>3</b><span>Robot platforms taught</span></div>
-<div class="stat"><b>30+</b><span>Students at MakerWorks Lab</span></div>
-</div></div>
+<div class="wrap"><p class="facts rv">Founded MakerWorks Lab in 2025 · 30+ students · Taught on 3 robot platforms · Coached teams for WRO, VEX IQ, Coolest Projects and Mekathlon</p></div>
 
 <section id="about"><div class="wrap">
 <p class="eyebrow rv">About</p><h2 class="rv">Entrepreneur &amp; technologist</h2>
-<figure class="lab rv"><img src="lab-desk.jpg" width="1000" height="750" loading="lazy" alt="Ajay Ummadi working at his desk in the MakerWorks Lab, with a Reachy Mini robot, a humanoid robot and SO-101 robot arms beside the monitor"><figcaption>At work in the MakerWorks Lab, Mumbai.</figcaption></figure>
 <div class="grid">
 <div class="card rv"><div class="ico">👋</div><h3>Who I am</h3><p>An entrepreneur and technologist based in India, with a background spanning enterprise IT consulting and now deep-tech education.</p></div>
 <div class="card rv"><div class="ico">🎯</div><h3>What I focus on</h3><p>AI, robotics and technology innovation, and getting hands-on tools into the hands of the next generation of builders.</p></div>
@@ -382,14 +363,5 @@
 <footer><div class="wrap">© <span id="y"></span> Ajay Ummadi. All rights reserved. · <a href="copyright/">Copyright &amp; credits</a> · Built with curiosity</div></footer>
 
 <script src="site.js"></script>
-<script>
-// typed role
-const words=['Robotics','Physical AI','Open Source','Maker Education'],t=document.getElementById('typed');
-if(!matchMedia('(prefers-reduced-motion:reduce)').matches){let w=0,i=0,del=false;
-(function tick(){const s=words[w];t.textContent=s.slice(0,i);
-if(!del&&i===s.length){del=true;return setTimeout(tick,1600)}
-if(del&&i===0){del=false;w=(w+1)%words.length}
-i+=del?-1:1;setTimeout(tick,del?40:80)})();}
-</script>
 </body>
 </html>
