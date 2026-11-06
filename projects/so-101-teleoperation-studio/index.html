@@ -66,6 +66,7 @@
    "applicationCategory": "DeveloperApplication",
    "operatingSystem": "Linux, macOS, Windows",
    "isBasedOn": "https://github.com/huggingface/lerobot",
+   "codeRepository": "https://github.com/ummadi-ajay/lerobot/tree/dashboard-and-monitor/dashboard",
    "@id": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/#project",
    "url": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/",
    "name": "SO-101 Teleoperation Studio: Web Dashboard & 3D Digital Twin for LeRobot",
@@ -78,7 +79,13 @@
    },
    "keywords": "SO-101, LeRobot, teleoperation, robot arm, digital twin, Three.js, Feetech STS3215, Python, leader follower arm",
    "inLanguage": "en",
-   "image": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/og.png",
+   "image": [
+   "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/og.png",
+   "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/screens/studio-cockpit.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/screens/studio-twin.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/screens/studio-telemetry.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/screens/studio-mobile.jpg"
+  ],
    "mainEntityOfPage": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/"
   },
   {
@@ -135,6 +142,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../style.css">
+<style>
+.ss-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.ss-grid figure{margin:0}
+.ss-grid button{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);cursor:zoom-in;box-shadow:0 8px 24px -14px rgba(15,23,42,.25);transition:.25s}
+.ss-grid button:hover,.ss-grid button:focus-visible{transform:translateY(-4px);box-shadow:0 20px 40px -18px rgba(2,132,199,.45);outline:none}
+.ss-grid img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top}
+.ss-lb{position:fixed;inset:0;z-index:50;background:rgba(10,14,24,.9);display:grid;place-items:center;padding:24px}.ss-lb[hidden]{display:none}
+.ss-lb img{max-width:min(94vw,1100px);max-height:82vh;border-radius:12px;background:#fff}.ss-lb p{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#d8e0ee;font-size:.9rem;padding:0 60px}
+.ss-lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:1.6rem;cursor:pointer;line-height:1}.ss-lb button:hover{background:rgba(255,255,255,.25)}
+.ss-lb .x{top:16px;right:16px}.ss-lb .pv{left:16px;top:50%}.ss-lb .nx{right:16px;top:50%}
+@media(max-width:700px){.ss-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="bg"><i></i><i></i><i></i></div>
@@ -146,6 +164,7 @@
 <p class="eyebrow rv">Featured project</p><h1 class="rv" style="font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;margin:6px 0 30px">SO-101 Teleoperation Studio</h1>
 <p class="muted rv" style="max-width:740px;margin:-12px 0 20px">A local web app that runs, monitors and visualizes teleoperation of two SO-101 robot arms: a hand-held leader arm controls a follower arm in real time. It sits on top of the open-source LeRobot library, talks to real hardware, and includes a 3D digital twin of both arms built from the official CAD.</p>
 <div class="chips big rv" style="margin:0 0 26px"><span class="chip">Python (stdlib only)</span><span class="chip">LeRobot</span><span class="chip">Feetech STS3215</span><span class="chip">Three.js</span><span class="chip">Vanilla JS</span></div>
+<div class="ss-wrap rv"><p class="muted" style="margin:0 0 12px;font-size:.88rem">Screenshots from the app running in its idle simulation mode, with no hardware connected. Tap one to enlarge.</p><div class="ss-grid"><figure><button type="button" data-i="0" aria-label="Enlarge screenshot 1: The Teleoperation Cockpit in simulation mode: the 3D digital twin of the teal leader and white follower arms, with controls above and telemetry below"><img src="screens/studio-cockpit.jpg" width="1440" height="1000" alt="The Teleoperation Cockpit in simulation mode: the 3D digital twin of the teal leader and white follower arms, with controls above and telemetry below" loading="eager"></button></figure><figure><button type="button" data-i="1" aria-label="Enlarge screenshot 2: Close-up of the 3D digital twin bay with split view, ghost overlay and camera presets"><img src="screens/studio-twin.jpg" width="1108" height="515" alt="Close-up of the 3D digital twin bay with split view, ghost overlay and camera presets" loading="lazy"></button></figure><figure><button type="button" data-i="2" aria-label="Enlarge screenshot 3: Telemetry matrix and per-joint kinematics panels, shown idle with no hardware connected"><img src="screens/studio-telemetry.jpg" width="1180" height="1560" alt="Telemetry matrix and per-joint kinematics panels, shown idle with no hardware connected" loading="lazy"></button></figure><figure><button type="button" data-i="3" aria-label="Enlarge screenshot 4: The same cockpit on a phone-width screen"><img src="screens/studio-mobile.jpg" width="420" height="1100" alt="The same cockpit on a phone-width screen" loading="lazy"></button></figure></div><div class="btns" style="margin:18px 0 0"><a class="btn primary" href="https://github.com/ummadi-ajay/lerobot/tree/dashboard-and-monitor/dashboard" target="_blank" rel="noopener">View the source on GitHub →</a><a class="btn" href="https://github.com/ummadi-ajay/lerobot/blob/dashboard-and-monitor/train_monitor.py" target="_blank" rel="noopener">Training Monitor code</a></div></div>
 <div class="stats rv" style="margin:0 0 26px">
 <div class="stat"><b>~3,500</b><span>lines across 5 files</span></div>
 <div class="stat"><b>11</b><span>backend endpoints</span></div>
@@ -174,7 +193,11 @@
 <section><div class="wrap"><p class="eyebrow rv">FAQ</p><h2 class="rv">Questions</h2><div class="grid" style="grid-template-columns:1fr"><details class="card rv"><summary style="cursor:pointer;font-weight:600">What is the SO-101 Teleoperation Studio?</summary><p style="margin-top:10px">A local web app that runs, monitors and visualizes teleoperation of two SO-101 robot arms. A hand-held leader arm controls a follower arm in real time, and a 3D digital twin mirrors both arms from live joint data.</p></details><details class="card rv"><summary style="cursor:pointer;font-weight:600">What does it run on?</summary><p style="margin-top:10px">The backend is Python standard library only and uses LeRobot's SO101Follower and SO101Leader classes for Feetech STS3215 bus servos. The frontend is plain JavaScript with Three.js for the 3D twin.</p></details><details class="card rv"><summary style="cursor:pointer;font-weight:600">Is it part of LeRobot?</summary><p style="margin-top:10px">No. It is a separate add-on built on the open-source LeRobot library and is not endorsed by LeRobot or Hugging Face.</p></details><details class="card rv"><summary style="cursor:pointer;font-weight:600">Who built it?</summary><p style="margin-top:10px">Ajay Ummadi of MakerWorks Lab set the product direction, tested on real hardware and designed the front-end UI. The backend, first UI and 3D digital twin were written with Claude Code.</p></details></div></div></section>
 <section><div class="wrap"><div class="cta rv"><p class="eyebrow">More</p><h2>Other projects</h2><div class="btns"><a class="btn primary" href="../../">Back to portfolio</a><a class="btn" href="../lerobot-so-101/">SO-101 Arms in 3D</a><a class="btn" href="../open-ear-earbuds/">Open-Ear Earbuds</a><a class="btn" href="../lerobot-training-monitor/">Training Monitor</a><a class="btn" href="https://www.linkedin.com/in/ajayummadi/" target="_blank" rel="noopener">LinkedIn</a></div></div></div></section>
 </main>
-<footer><div class="wrap">© <span id="y"></span> <a href="../../">Ajay Ummadi</a> · <a href="mailto:ummadi.ajay@gmail.com">ummadi.ajay@gmail.com</a> · <a href="tel:+919493989713">+91 94939 89713</a></div></footer>
+<footer><div class="wrap">© <span id="y"></span> <a href="../../">Ajay Ummadi</a> · <a href="mailto:ummadi.ajay@gmail.com">ummadi.ajay@gmail.com</a></div></footer>
+<div class="ss-lb" id="sslb" hidden role="dialog" aria-modal="true" aria-label="Screenshot viewer"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous">‹</button><img alt=""><button class="nx" aria-label="Next">›</button><p></p></div>
+<script>
+(function(){const C=["The Teleoperation Cockpit in simulation mode: the 3D digital twin of the teal leader and white follower arms, with controls above and telemetry below", "Close-up of the 3D digital twin bay with split view, ghost overlay and camera presets", "Telemetry matrix and per-joint kinematics panels, shown idle with no hardware connected", "The same cockpit on a phone-width screen"],F=["studio-cockpit.jpg", "studio-twin.jpg", "studio-telemetry.jpg", "studio-mobile.jpg"],lb=document.getElementById("sslb"),im=lb.querySelector("img"),p=lb.querySelector("p");let i=0,last=null;function show(n){i=(n+C.length)%C.length;im.src="screens/"+F[i];im.alt=C[i];p.textContent=(i+1)+" / "+C.length+" · "+C[i]}function open(n){last=document.activeElement;show(n);lb.hidden=false;document.body.style.overflow="hidden";lb.querySelector(".x").focus()}function close(){lb.hidden=true;document.body.style.overflow="";last&&last.focus()}document.querySelectorAll(".ss-grid button").forEach(b=>b.addEventListener("click",()=>open(+b.dataset.i)));lb.querySelector(".x").onclick=close;lb.querySelector(".pv").onclick=()=>show(i-1);lb.querySelector(".nx").onclick=()=>show(i+1);lb.addEventListener("click",e=>{if(e.target===lb)close()});addEventListener("keydown",e=>{if(lb.hidden)return;if(e.key==="Escape")close();if(e.key==="ArrowLeft")show(i-1);if(e.key==="ArrowRight")show(i+1)})})();
+</script>
 <script src="../../site.js"></script>
 </body>
 </html>
