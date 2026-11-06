@@ -150,6 +150,30 @@
 .eb-lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:1.6rem;cursor:pointer;line-height:1}.eb-lb button:hover{background:rgba(255,255,255,.25)}
 .eb-lb .x{top:16px;right:16px}.eb-lb .pv{left:16px;top:50%}.eb-lb .nx{right:16px;top:50%}
 @media(max-width:860px){.eb-gal{grid-template-columns:repeat(2,1fr)}}
+
+.eb3d{margin:8px 0 34px}
+.eb3d-tabs{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:99px;background:var(--card);margin-bottom:16px}
+.eb3d-tabs button{border:0;background:transparent;padding:8px 18px;border-radius:99px;font:600 .9rem 'Space Grotesk',sans-serif;color:var(--muted);cursor:pointer;transition:.2s}
+.eb3d-tabs button[aria-selected=true]{background:linear-gradient(90deg,var(--a),var(--b));color:#fff}
+.eb3d-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}
+.xv-list{list-style:none;padding:0;margin:0;display:grid;gap:6px}.xv-list[hidden]{display:none}
+.xv-list li{display:flex;gap:14px;align-items:center;padding:8px 12px;border:1px solid transparent;border-radius:12px;transition:.2s;cursor:pointer;outline:none}
+.xv-list li .n{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:600 .78rem 'Space Grotesk';color:var(--muted)}
+.xv-list li b{display:block;font:600 .95rem 'Space Grotesk'}.xv-list li span:not(.n){color:var(--muted);font-size:.88rem}
+.xv-list li.on{border-color:var(--line);background:var(--card)}.xv-list li.on .n{border-color:var(--a);color:var(--a)}
+.so3d{position:relative;border:1px solid var(--line);border-radius:24px;background:radial-gradient(ellipse at 50% 30%,#f4f7fb,#dfe6f0 85%);overflow:hidden;min-height:500px}
+.so3d .stage{position:absolute;inset:0;touch-action:pan-y}.so3d canvas{display:block;width:100%;height:100%;cursor:grab}.so3d canvas:active{cursor:grabbing}
+.so-load{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;color:var(--muted);font-size:.9rem;transition:opacity .5s;pointer-events:none}
+.so-load .bar{width:180px;height:4px;border-radius:4px;background:var(--line);overflow:hidden}.so-load .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b));transition:width .2s}
+.so3d.ready .so-load{opacity:0}
+.so-ctl{position:absolute;left:14px;right:14px;bottom:12px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.so-ctl label{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted);background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border:1px solid var(--line);padding:6px 12px;border-radius:99px}
+.so-ctl input{width:130px;accent-color:var(--a)}.so-ctl .btn{padding:6px 14px;font-size:.8rem;cursor:pointer;color:var(--text)}.so-ctl .btn[aria-pressed=true]{border-color:var(--a)}
+.so-hint{position:absolute;top:12px;right:16px;font-size:.75rem;color:var(--muted);margin:0;pointer-events:none}
+.so-mk{position:absolute;left:0;top:0;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;border:1.5px solid var(--muted);background:var(--bg);color:var(--muted);font:600 .72rem 'Space Grotesk';display:grid;place-items:center;cursor:pointer;transition:border-color .2s,color .2s,background .2s;z-index:2;will-change:transform}
+.so-mk.on{border-color:var(--a);color:var(--a);background:color-mix(in srgb,var(--a) 22%,var(--bg))}
+.so-mk b{position:absolute;left:30px;white-space:nowrap;font:600 .68rem 'Space Grotesk';letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:.2s;pointer-events:none;color:var(--text)}.so-mk.on b{opacity:1}
+@media(max-width:860px){.eb3d-grid{grid-template-columns:1fr}.so3d{order:-1;min-height:420px}}
 </style>
 </head>
 <body>
@@ -163,6 +187,18 @@
 <p class="muted rv" style="max-width:720px;margin:-12px 0 26px">I designed and 3D-printed wired open-ear earphones around a driver salvaged from a pair of wired earphones, plus a pocket case with a cable reel to stop cords tangling. The pod sits in front of the ear canal and an arm hooks over the ear. Nothing goes into the canal.</p>
 <div class="chips big rv" style="margin:0 0 26px"><span class="chip">Role: design, CAD scripting, printing, fit testing</span><span class="chip">Blender (Python)</span><span class="chip">FDM · PETG / TPU</span><span class="chip">Salvaged driver</span></div>
 <div class="eb-gal rv"><figure><button type="button" data-i="0" aria-label="Enlarge photo 1: The printed pocket case with the orange cable reel, with both earbuds seated in their grooves"><img src="photos/earbuds-1.jpg" width="1100" height="825" alt="The printed pocket case with the orange cable reel, with both earbuds seated in their grooves" loading="eager"></button><figcaption>The printed pocket case with the orange cable reel, with both earbuds seated in their grooves</figcaption></figure><figure><button type="button" data-i="1" aria-label="Enlarge photo 2: The case open from above: earbuds in their pockets and the cable wound onto the reel"><img src="photos/earbuds-2.jpg" width="825" height="1100" alt="The case open from above: earbuds in their pockets and the cable wound onto the reel" loading="lazy"></button><figcaption>The case open from above: earbuds in their pockets and the cable wound onto the reel</figcaption></figure><figure><button type="button" data-i="2" aria-label="Enlarge photo 3: Wearing one earphone: the pod sits in front of the ear canal and the arm hooks over the ear"><img src="photos/earbuds-3.jpg" width="825" height="1100" alt="Wearing one earphone: the pod sits in front of the ear canal and the arm hooks over the ear" loading="lazy"></button><figcaption>Wearing one earphone: the pod sits in front of the ear canal and the arm hooks over the ear</figcaption></figure><figure><button type="button" data-i="3" aria-label="Enlarge photo 4: A white printed version of the case with both earbuds in their pockets"><img src="photos/earbuds-4.jpg" width="825" height="1100" alt="A white printed version of the case with both earbuds in their pockets" loading="lazy"></button><figcaption>A white printed version of the case with both earbuds in their pockets</figcaption></figure></div>
+<div class="eb3d" id="design3d">
+<p class="eyebrow">Interactive</p><h3 style="font-size:1.6rem;margin:4px 0 6px">Explore the design in 3D</h3>
+<p class="muted" style="max-width:640px;margin-bottom:16px">A 3D preview of my compact earbud and the slim reel case, built from the CAD my scripts generate. Drag to rotate, slide to pull it apart, and hover a part to see what it does.</p>
+<div class="eb3d-tabs" role="tablist" aria-label="Choose a model"><button type="button" role="tab" aria-selected="true" data-m="earbud">Earbud</button><button type="button" role="tab" aria-selected="false" data-m="case">Case &amp; reel</button></div>
+<div class="eb3d-grid">
+<div><ol class="xv-list" data-m="earbud"><li data-p="1" tabindex="0"><span class="n">1</span><div><b>Shell and arm</b><span>The compact pod with its front grille, and the arm that hooks over the ear.</span></div></li><li data-p="2" tabindex="0"><span class="n">2</span><div><b>Salvaged driver</b><span>The 14.4 mm driver from a pair of wired earphones, sound side toward the grille. Shown as a simple model.</span></div></li><li data-p="3" tabindex="0"><span class="n">3</span><div><b>Back cap</b><span>Snaps in behind the driver, clamps its foam rim, and has a cable slot and a rear vent.</span></div></li></ol><ol class="xv-list" data-m="case" hidden><li data-p="1" tabindex="0"><span class="n">1</span><div><b>Base</b><span>Arm-shaped pockets for each earbud, plus the well for the reel.</span></div></li><li data-p="2" tabindex="0"><span class="n">2</span><div><b>Reel drum</b><span>The drum the cable winds around, with two pinch slots to hold the cable ends.</span></div></li><li data-p="3" tabindex="0"><span class="n">3</span><div><b>Turning knob</b><span>A disc with two finger holes that locks onto the drum and sits flush in the lid.</span></div></li><li data-p="4" tabindex="0"><span class="n">4</span><div><b>Lid</b><span>Covers the earbuds and holds the arms down, with MAKERWORKSLAB engraved on top.</span></div></li></ol></div>
+<div class="so3d" id="eb3dv"><div class="stage" aria-label="Interactive 3D exploded view"></div><div class="so-load"><div class="bar"><i></i></div><span>Loading 3D model…</span></div>
+<div class="so-ctl"><label>Assembled<input id="eb-ex" type="range" min="0" max="100" value="100" aria-label="Explode amount">Exploded</label><button id="eb-rot" class="btn" type="button" aria-pressed="true">Auto-rotate</button></div>
+<p class="so-hint">Drag to rotate · scroll to zoom</p></div>
+</div>
+<p class="muted" style="font-size:.8rem;margin-top:12px">Preview meshes are simplified for the web. The case shown is the slim 116 × 56 mm design.</p>
+</div>
 <div class="grid">
 <div class="card rv"><div class="ico">⚠️</div><h3>The problem</h3><p>Sealed earbuds block traffic and alarms, get sweaty and tiring, fail within weeks to months when cheap, and tangle in a pocket.</p></div>
 <div class="card rv"><div class="ico">👂</div><h3>The solution</h3><p>A wired, passive open-ear design: no battery, pairing, audio delay or radio. Repairable by reprinting one part, and it reuses a driver that would otherwise be thrown away.</p></div>
@@ -197,5 +233,79 @@
 (function(){const C=["The printed pocket case with the orange cable reel, with both earbuds seated in their grooves", "The case open from above: earbuds in their pockets and the cable wound onto the reel", "Wearing one earphone: the pod sits in front of the ear canal and the arm hooks over the ear", "A white printed version of the case with both earbuds in their pockets"],lb=document.getElementById("eblb"),im=lb.querySelector("img"),p=lb.querySelector("p");let i=0,last=null;function show(n){i=(n+C.length)%C.length;im.src="photos/earbuds-"+(i+1)+".jpg";im.alt=C[i];p.textContent=(i+1)+" / "+C.length+" · "+C[i]}function open(n){last=document.activeElement;show(n);lb.hidden=false;document.body.style.overflow="hidden";lb.querySelector(".x").focus()}function close(){lb.hidden=true;document.body.style.overflow="";last&&last.focus()}document.querySelectorAll(".eb-gal button").forEach(b=>b.addEventListener("click",()=>open(+b.dataset.i)));lb.querySelector(".x").onclick=close;lb.querySelector(".pv").onclick=()=>show(i-1);lb.querySelector(".nx").onclick=()=>show(i+1);lb.addEventListener("click",e=>{if(e.target===lb)close()});addEventListener("keydown",e=>{if(lb.hidden)return;if(e.key==="Escape")close();if(e.key==="ArrowLeft")show(i-1);if(e.key==="ArrowRight")show(i+1)})})();
 </script>
 <script src="../../site.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {toCreasedNormals} from 'three/addons/utils/BufferGeometryUtils.js';
+const host=document.getElementById('eb3dv'),stageEl=host.querySelector('.stage'),bar=host.querySelector('.so-load i'),loadTxt=host.querySelector('.so-load span');
+const root=document.getElementById('design3d'),tabs=[...root.querySelectorAll('.eb3d-tabs button')],lists={};root.querySelectorAll('.xv-list').forEach(l=>lists[l.dataset.m]=l);
+const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const MODELS={
+ earbud:{file:'model/parts-earbud.json',names:['Shell and arm','Salvaged driver','Back cap'],rot:[0,Math.PI/2,0],off:{1:[0,0,0],2:[0,0,17],3:[0,0,36]},dir:[.35,.28,.9]},
+ case:{file:'model/parts-case.json',names:['Base','Reel drum','Turning knob','Lid'],rot:[-Math.PI/2,0,0],off:{1:[0,0,0],2:[0,0,26],3:[0,0,52],4:[0,0,84]},dir:[.55,.5,.7]}
+};
+let started=false,visible=true;
+new IntersectionObserver(([e])=>{visible=e.isIntersecting;if(visible&&!started){started=true;init().catch(fail)}},{rootMargin:'250px'}).observe(host);
+function fail(err){console.warn(err);loadTxt.textContent='3D view is not available in this browser.';bar.parentNode.style.display='none'}
+async function init(){
+ const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+ renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.82;stageEl.appendChild(renderer.domElement);
+ const scene=new THREE.Scene();const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(new RoomEnvironment(),0.04).texture;
+ const cam=new THREE.PerspectiveCamera(32,1,.1,200);const ctl=new OrbitControls(cam,renderer.domElement);ctl.enableDamping=true;ctl.enablePan=false;ctl.autoRotate=!still;ctl.autoRotateSpeed=1.1;
+ const sun=new THREE.DirectionalLight(0xffffff,1.6);sun.position.set(5,10,6);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-12,right:12,top:12,bottom:-12,near:1,far:40});sun.shadow.bias=-0.0004;scene.add(sun);
+ const rim=new THREE.DirectionalLight(0x7dd3fc,.6);rim.position.set(-6,3,-5);scene.add(rim);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(120,120),new THREE.ShadowMaterial({opacity:.32}));ground.rotation.x=-Math.PI/2;ground.receiveShadow=true;scene.add(ground);
+ const MATS={print:new THREE.MeshStandardMaterial({color:0xfbfcfe,roughness:.5}),case:new THREE.MeshStandardMaterial({color:0xb7c4d6,roughness:.55}),reel:new THREE.MeshStandardMaterial({color:0xf08a24,roughness:.5}),knob:new THREE.MeshStandardMaterial({color:0xf08a24,roughness:.5}),
+  driver:new THREE.MeshStandardMaterial({color:0xc9ced8,roughness:.3,metalness:.8}),foam:new THREE.MeshStandardMaterial({color:0x15181f,roughness:.9})};
+ const geos={};
+ function decode(buf){const dv=new DataView(buf),nv=dv.getUint32(0,true),ni=dv.getUint32(4,true),u32=dv.getUint32(8,true);const mn=[16,20,24].map(o=>dv.getFloat32(o,true)),sz=[28,32,36].map(o=>dv.getFloat32(o,true));
+  const q=new Uint16Array(buf.slice(40,40+nv*6)),pos=new Float32Array(nv*3);for(let i=0;i<nv*3;i++)pos[i]=mn[i%3]+q[i]/65535*sz[i%3];
+  let io=40+nv*6;if(u32&&io%4)io+=2;const idx=u32?new Uint32Array(buf.slice(io,io+ni*4)):new Uint16Array(buf.slice(io,io+ni*2));
+  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));g.setIndex(new THREE.BufferAttribute(idx,1));return toCreasedNormals(g,0.6)}
+ const built={};let cur=null,hov=0,t=0,tgt=1;
+ const slider=document.getElementById('eb-ex'),rotBtn=document.getElementById('eb-rot');
+ async function build(key){
+  const M=MODELS[key],parts=await (await fetch(M.file)).json();const uniq=[...new Set(parts.filter(p=>p.mesh).map(p=>p.mesh))];let done=0;
+  await Promise.all(uniq.filter(n=>!geos[n]).map(async n=>{geos[n]=decode(await (await fetch('model/'+n+'.bin')).arrayBuffer());done++;bar.style.width=(done/uniq.length*100)+'%'}));
+  const rig=new THREE.Group();rig.rotation.set(...M.rot);rig.scale.setScalar(.1);scene.add(rig);rig.visible=false;
+  const gs={},sum={},cnt={},meshes=[];
+  const add=(g,geo,mat,m)=>{gs[g]=gs[g]||(rig.add(gs[g]=new THREE.Group()),gs[g]);const mesh=new THREE.Mesh(geo,mat.clone());mesh.matrixAutoUpdate=false;if(m)mesh.matrix.fromArray(m);mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.g=g;gs[g].add(mesh);meshes.push(mesh);
+   geo.computeBoundingBox();const c=geo.boundingBox.getCenter(new THREE.Vector3()).applyMatrix4(mesh.matrix);sum[g]=(sum[g]||new THREE.Vector3()).add(c);cnt[g]=(cnt[g]||0)+1};
+  for(const p of parts){
+   if(p.drv){const can=new THREE.CylinderGeometry(7.2,7.2,6.6,64);can.rotateX(Math.PI/2);can.translate(0,0,1.6+3.3);const foam=new THREE.CylinderGeometry(7.2,7.2,.8,64);foam.rotateX(Math.PI/2);foam.translate(0,0,.8+.4);add(p.g,can,MATS.driver);add(p.g,foam,MATS.foam)}
+   else add(p.g,geos[p.mesh],MATS[p.mat]||MATS.print,p.m)}
+  const ids=Object.keys(gs).map(Number).sort((a,b)=>a-b),C={},OFF={};ids.forEach(g=>{C[g]=sum[g].clone().divideScalar(cnt[g]);OFF[g]=new THREE.Vector3(...M.off[g])});
+  ids.forEach(g=>gs[g].position.copy(OFF[g]));rig.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(rig),sph=box.getBoundingSphere(new THREE.Sphere());
+  ids.forEach(g=>gs[g].position.set(0,0,0));rig.updateMatrixWorld(true);
+  const mk={};ids.forEach(g=>{const d=document.createElement('div');d.className='so-mk';d.dataset.p=g;d.dataset.m=key;d.innerHTML=g+'<b>'+M.names[g-1]+'</b>';d.hidden=true;host.appendChild(d);mk[g]=d});
+  built[key]={rig,gs,ids,C,OFF,meshes,mk,sph,box,dir:new THREE.Vector3(...M.dir).normalize()};
+ }
+ function setHover(g){if(g===hov)return;hov=g;if(!cur)return;const B=built[cur];B.meshes.forEach(m=>{const on=m.userData.g===g;m.material.emissive.set(on?0x16a085:0);m.material.emissiveIntensity=on?.55:0});
+  [...lists[cur].children].forEach(li=>li.classList.toggle('on',+li.dataset.p===g));Object.values(B.mk).forEach(d=>d.classList.toggle('on',+d.dataset.p===g))}
+ function fit(){if(!cur)return;const B=built[cur],a=cam.aspect,vf=cam.fov*Math.PI/180,hf=2*Math.atan(Math.tan(vf/2)*a);const d=B.sph.radius/Math.sin(Math.min(vf,hf)/2)*0.95;cam.position.copy(B.sph.center).addScaledVector(B.dir,d);ctl.target.copy(B.sph.center);ctl.maxDistance=d*1.8;ctl.minDistance=d*.35;ctl.update();
+  ground.position.y=B.box.min.y-.5}
+ async function show(key){if(!built[key]){host.classList.remove('ready');await build(key);host.classList.add('ready')}
+  if(cur){built[cur].rig.visible=false;Object.values(built[cur].mk).forEach(d=>d.hidden=true);lists[cur].hidden=true}
+  cur=key;built[key].rig.visible=true;Object.values(built[key].mk).forEach(d=>d.hidden=false);lists[key].hidden=false;hov=0;t=still?tgt:0;fit();
+  tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.m===key))}
+ tabs.forEach(b=>b.addEventListener('click',()=>show(b.dataset.m)));
+ slider.addEventListener('input',()=>{tgt=slider.value/100;if(still)t=tgt});rotBtn.addEventListener('click',()=>{ctl.autoRotate=!ctl.autoRotate;rotBtn.setAttribute('aria-pressed',ctl.autoRotate)});ctl.addEventListener('start',()=>{ctl.autoRotate=false;rotBtn.setAttribute('aria-pressed','false')});
+ Object.entries(lists).forEach(([k,l])=>[...l.children].forEach(li=>{const g=+li.dataset.p;['mouseenter','focus'].forEach(e=>li.addEventListener(e,()=>setHover(g)));['mouseleave','blur'].forEach(e=>li.addEventListener(e,()=>setHover(0)))}));
+ host.addEventListener('mouseover',e=>{const d=e.target.closest&&e.target.closest('.so-mk');if(d)setHover(+d.dataset.p)});host.addEventListener('mouseout',e=>{const d=e.target.closest&&e.target.closest('.so-mk');if(d)setHover(0)});
+ const ray=new THREE.Raycaster(),ptr=new THREE.Vector2();
+ renderer.domElement.addEventListener('pointermove',e=>{if(!cur)return;const r=renderer.domElement.getBoundingClientRect();ptr.set((e.clientX-r.left)/r.width*2-1,-((e.clientY-r.top)/r.height)*2+1);ray.setFromCamera(ptr,cam);const h=ray.intersectObjects(built[cur].meshes,false)[0];setHover(h?h.object.userData.g:0)});
+ renderer.domElement.addEventListener('pointerleave',()=>setHover(0));
+ function size(){const w=host.clientWidth,h=host.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();fit()}
+ new ResizeObserver(size).observe(host);
+ await show('earbud');size();
+ const v=new THREE.Vector3();
+ (function frame(){requestAnimationFrame(frame);if(!visible||!cur)return;const B=built[cur];t+=(tgt-t)*(still?1:.045);B.ids.forEach(g=>B.gs[g].position.copy(B.OFF[g]).multiplyScalar(t));
+  ctl.update();renderer.render(scene,cam);const w=host.clientWidth,h=host.clientHeight;
+  B.ids.forEach(g=>{v.copy(B.C[g]).addScaledVector(B.OFF[g],t);B.rig.localToWorld(v);v.project(cam);B.mk[g].style.transform='translate('+((v.x*.5+.5)*w)+'px,'+((-v.y*.5+.5)*h)+'px)';B.mk[g].style.display=v.z<1?'':'none'})})();
+}
+</script>
+
 </body>
 </html>

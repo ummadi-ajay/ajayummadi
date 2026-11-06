@@ -1,0 +1,1 @@
+Simplified, quantized preview meshes derived from the open-ear earbud and case CAD by Ajay Ummadi (MakerWorks Lab). Full-resolution files are not published here.
