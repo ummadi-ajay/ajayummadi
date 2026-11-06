@@ -20,8 +20,8 @@ for(const p of P){if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y
 const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy);if(d<110){p.x+=dx/d*1.2;p.y+=dy/d*1.2}}}
 x.lineWidth=1;
 for(let i=0;i<P.length;i++){for(let j=i+1;j<P.length;j++){const d=Math.hypot(P[i].x-P[j].x,P[i].y-P[j].y);
-if(d<150){x.globalAlpha=(1-d/150)*.35;x.strokeStyle=a;x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}}
-x.globalAlpha=.8;x.fillStyle=g;for(const p of P){x.beginPath();x.arc(p.x,p.y,1.8,0,6.283);x.fill()}
+if(d<150){x.globalAlpha=(1-d/150)*.22;x.strokeStyle=a;x.beginPath();x.moveTo(P[i].x,P[i].y);x.lineTo(P[j].x,P[j].y);x.stroke()}}}
+x.globalAlpha=.45;x.fillStyle=g;for(const p of P){x.beginPath();x.arc(p.x,p.y,1.8,0,6.283);x.fill()}
 x.globalAlpha=1;if(!still)requestAnimationFrame(draw)}
 addEventListener('resize',()=>{size();if(still)draw()});addEventListener('mousemove',e=>{m.x=e.clientX;m.y=e.clientY});
 size();draw()})();

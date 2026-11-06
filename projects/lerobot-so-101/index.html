@@ -15,7 +15,7 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="LeRobot SO-101 arms assembled by Ajay Ummadi">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="LeRobot SO-101 Arms: Assembled by Hand, in 3D">
 <meta name="twitter:description" content="Ajay Ummadi assembled a LeRobot SO-101 leader and follower arm pair. Explore an interactive 3D exploded view of the arm built from the official CAD, plus the assembly stages and calibration."><meta name="twitter:image" content="https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/og.png">
-<meta name="theme-color" content="#070a12">
+<meta name="theme-color" content="#ffffff">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -143,14 +143,14 @@
 .xv-list li .n{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:600 .78rem 'Space Grotesk';color:var(--muted)}
 .xv-list li b{display:block;font:600 .95rem 'Space Grotesk'}.xv-list li span:not(.n){color:var(--muted);font-size:.88rem}
 .xv-list li.on{border-color:var(--line);background:var(--card)}.xv-list li.on .n{border-color:var(--a);color:var(--a)}
-.so3d{position:relative;border:1px solid var(--line);border-radius:24px;background:radial-gradient(ellipse at 50% 35%,color-mix(in srgb,var(--b) 14%,transparent),transparent 70%),var(--card);overflow:hidden;min-height:540px}
+.so3d{position:relative;border:1px solid var(--line);border-radius:24px;background:radial-gradient(ellipse at 50% 35%,color-mix(in srgb,var(--b) 8%,#fff),#fff 75%);overflow:hidden;min-height:540px}
 .so3d .stage{position:absolute;inset:0;touch-action:pan-y}
 .so3d canvas{display:block;width:100%;height:100%;cursor:grab}.so3d canvas:active{cursor:grabbing}
 .so-load{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;color:var(--muted);font-size:.9rem;transition:opacity .5s;pointer-events:none}
 .so-load .bar{width:180px;height:4px;border-radius:4px;background:var(--line);overflow:hidden}.so-load .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b));transition:width .2s}
 .so3d.ready .so-load{opacity:0}
 .so-ctl{position:absolute;left:14px;right:14px;bottom:12px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.so-ctl label{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted);background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(8px);border:1px solid var(--line);padding:6px 12px;border-radius:99px}
+.so-ctl label{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--muted);background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border:1px solid var(--line);padding:6px 12px;border-radius:99px}
 .so-ctl input{width:130px;accent-color:var(--a)}
 .so-ctl .btn{padding:6px 14px;font-size:.8rem;cursor:pointer;color:var(--text)}.so-ctl .btn[aria-pressed=true]{border-color:var(--a)}
 .so-hint{position:absolute;top:12px;right:16px;font-size:.75rem;color:var(--muted);margin:0;pointer-events:none}
@@ -259,7 +259,7 @@ async function init(){
  ids.forEach(g=>gs[g].position.copy(OFF[g]));rig.updateMatrixWorld(true);
  const box=new THREE.Box3().setFromObject(rig);const sph=box.getBoundingSphere(new THREE.Sphere());
  ids.forEach(g=>gs[g].position.set(0,0,0));rig.updateMatrixWorld(true);
- const ground=new THREE.Mesh(new THREE.PlaneGeometry(60,60),new THREE.ShadowMaterial({opacity:.28}));ground.rotation.x=-Math.PI/2;ground.position.y=box.min.y-.35;ground.receiveShadow=true;scene.add(ground);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(60,60),new THREE.ShadowMaterial({opacity:.18}));ground.rotation.x=-Math.PI/2;ground.position.y=box.min.y-.35;ground.receiveShadow=true;scene.add(ground);
  const target=sph.center.clone();ctl.target.copy(target);
  const dir=new THREE.Vector3(.62,.34,.7).normalize();
  function fit(){const a=cam.aspect,vf=cam.fov*Math.PI/180,hf=2*Math.atan(Math.tan(vf/2)*a);const d=sph.radius/Math.sin(Math.min(vf,hf)/2)*0.92;cam.position.copy(target).addScaledVector(dir,d);ctl.maxDistance=d*1.8;ctl.minDistance=d*.35;ctl.update()}
