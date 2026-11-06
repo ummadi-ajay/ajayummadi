@@ -237,10 +237,13 @@
 <script src="../../site.js"></script>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
-import * as THREE from 'three';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
-import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
-import {toCreasedNormals} from 'three/addons/utils/BufferGeometryUtils.js';
+// load Three.js only when the viewer is about to scroll into view
+await new Promise(r=>{const el=document.querySelector('.so3d');if(!el||!('IntersectionObserver' in window))return r();
+new IntersectionObserver((e,o)=>{if(e.some(x=>x.isIntersecting)){o.disconnect();r()}},{rootMargin:'400px'}).observe(el)});
+const THREE=await import('three');
+const {OrbitControls}=await import('three/addons/controls/OrbitControls.js');
+const {RoomEnvironment}=await import('three/addons/environments/RoomEnvironment.js');
+const {toCreasedNormals}=await import('three/addons/utils/BufferGeometryUtils.js');
 const host=document.getElementById('eb3dv'),stageEl=host.querySelector('.stage'),bar=host.querySelector('.so-load i'),loadTxt=host.querySelector('.so-load span');
 const root=document.getElementById('design3d'),tabs=[...root.querySelectorAll('.eb3d-tabs button')],lists={};root.querySelectorAll('.xv-list').forEach(l=>lists[l.dataset.m]=l);
 const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
