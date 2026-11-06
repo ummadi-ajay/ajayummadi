@@ -73,7 +73,18 @@
    },
    "keywords": "LeRobot, SO-101, SO-ARM100, robot arm assembly, STS3215, leader follower arm, Hugging Face, 3D exploded view, MakerWorks Lab",
    "url": "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/",
-   "image": "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/og.png",
+   "image": [
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/og.png",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-1.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-2.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-3.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-4.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-5.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-6.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-7.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-8.jpg",
+   "https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/photos/so101-9.jpg"
+  ],
    "inLanguage": "en",
    "about": {
     "@type": "Thing",
@@ -143,7 +154,7 @@
 .xv-list li .n{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:600 .78rem 'Space Grotesk';color:var(--muted)}
 .xv-list li b{display:block;font:600 .95rem 'Space Grotesk'}.xv-list li span:not(.n){color:var(--muted);font-size:.88rem}
 .xv-list li.on{border-color:var(--line);background:var(--card)}.xv-list li.on .n{border-color:var(--a);color:var(--a)}
-.so3d{position:relative;border:1px solid var(--line);border-radius:24px;background:radial-gradient(ellipse at 50% 35%,color-mix(in srgb,var(--b) 8%,#fff),#fff 75%);overflow:hidden;min-height:540px}
+.so3d{position:relative;border:1px solid var(--line);border-radius:24px;background:radial-gradient(ellipse at 50% 30%,#f4f7fb,#dfe6f0 85%);overflow:hidden;min-height:540px}
 .so3d .stage{position:absolute;inset:0;touch-action:pan-y}
 .so3d canvas{display:block;width:100%;height:100%;cursor:grab}.so3d canvas:active{cursor:grabbing}
 .so-load{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;color:var(--muted);font-size:.9rem;transition:opacity .5s;pointer-events:none}
@@ -159,6 +170,24 @@
 .so-mk b{position:absolute;left:30px;white-space:nowrap;font:600 .68rem 'Space Grotesk';letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:.2s;pointer-events:none;color:var(--text)}
 .so-mk.on b{opacity:1}
 @media(max-width:860px){.xv-wrap{grid-template-columns:1fr}.so3d{order:-1;min-height:420px}}
+
+.so-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.so-photo{margin:0;position:relative}
+.so-photo::before{content:"";position:absolute;inset:-16px;border-radius:34px;background:linear-gradient(135deg,var(--a),var(--b),var(--c));filter:blur(36px);opacity:.22;z-index:-1}
+.so-photo img{width:100%;height:auto;display:block;border-radius:24px;border:1px solid var(--line);box-shadow:0 30px 70px -28px rgba(15,23,42,.4);aspect-ratio:3/4;object-fit:cover;object-position:50% 40%}
+.so-photo figcaption{margin-top:10px;text-align:center;color:var(--muted);font-size:.85rem}
+.so-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.so-gal figure{margin:0}.so-gal button{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);cursor:zoom-in;box-shadow:0 8px 24px -14px rgba(15,23,42,.25);transition:.25s}
+.so-gal button:hover,.so-gal button:focus-visible{transform:translateY(-4px);box-shadow:0 20px 40px -18px rgba(2,132,199,.45);outline:none}
+.so-gal img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.so-lb{position:fixed;inset:0;z-index:50;background:rgba(10,14,24,.9);display:grid;place-items:center;padding:24px}
+.so-lb[hidden]{display:none}
+.so-lb img{max-width:min(92vw,720px);max-height:82vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.so-lb p{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#d8e0ee;font-size:.9rem;padding:0 60px}
+.so-lb button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:1.6rem;cursor:pointer;line-height:1}
+.so-lb button:hover{background:rgba(255,255,255,.25)}
+.so-lb .x{top:16px;right:16px}.so-lb .pv{left:16px;top:50%}.so-lb .nx{right:16px;top:50%}
+@media(max-width:860px){.so-hero-grid{grid-template-columns:1fr}.so-photo{max-width:380px;margin:0 auto;order:-1}.so-gal{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -167,11 +196,15 @@
 <ul><li><a href="../../">Home</a></li><li><a href="../../#projects">Projects</a></li><li><a href="../../#videos">Videos</a></li><li><a href="../../#contact">Contact</a></li></ul></div></nav>
 <main>
 <div class="wrap" style="padding-top:28px"><p class="muted" style="font-size:.88rem"><a href="../../">Ajay Ummadi</a> › <a href="../../#projects">Projects</a> › LeRobot SO-101 Arms</p></div>
-<section class="so-hero"><div class="wrap">
+<section class="so-hero"><div class="wrap so-hero-grid">
+<div>
 <p class="eyebrow rv">Project · Robotics</p>
 <h1 class="rv" style="font-size:clamp(2.2rem,6vw,3.8rem);letter-spacing:-.03em;margin:6px 0 18px;line-height:1.05">LeRobot <span class="grad">SO-101</span> arms</h1>
-<p class="lead rv" style="max-width:640px">I assembled a leader and follower SO-101 pair by hand, following the LeRobot guide. Drag the 3D model below to look around, and slide it apart to see how it goes together.</p>
-<div class="chips big rv"><span class="chip">LeRobot</span><span class="chip">12 × STS3215 servos</span><span class="chip">Leader + follower</span><span class="chip">Hands-on assembly</span></div>
+<p class="lead rv" style="max-width:560px">I assembled a leader and follower SO-101 pair by hand, following the LeRobot guide. Below: photos of my real build, and an interactive 3D model you can pull apart.</p>
+<div class="chips big rv" style="margin:0 0 22px"><span class="chip">LeRobot</span><span class="chip">12 × STS3215 servos</span><span class="chip">Leader + follower</span><span class="chip">Hands-on assembly</span></div>
+<div class="btns rv"><a class="btn primary" href="#gallery">My build photos ↓</a><a class="btn" href="#build">Explore in 3D</a></div>
+</div>
+<figure class="rv so-photo"><img src="photos/so101-1.jpg" width="1000" height="1333" alt="Follower arm (white) and leader arm (teal) standing side by side on my desk" fetchpriority="high"><figcaption>My leader (teal) and follower (white) arms</figcaption></figure>
 </div></section>
 
 <section id="build"><div class="wrap xv-wrap rv">
@@ -188,6 +221,14 @@
 <p class="so-hint">Drag to rotate · scroll to zoom</p>
 </div>
 </div></section>
+
+<section id="gallery"><div class="wrap">
+<p class="eyebrow rv">My build</p><h2 class="rv">The real arms</h2>
+<p class="muted rv" style="max-width:640px;margin:-12px 0 24px">The teal arm is the leader I move by hand, and the white arm is the follower that copies it. Tap a photo to enlarge it.</p>
+<div class="so-gal"><figure class="rv"><button type="button" data-i="0" aria-label="Enlarge photo 1: Follower arm (white) and leader arm (teal) standing side by side on my desk"><img src="photos/so101-1.jpg" width="1000" height="1333" alt="Follower arm (white) and leader arm (teal) standing side by side on my desk" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="1" aria-label="Enlarge photo 2: Leader arm close-up: the shoulder and elbow motors with the servo wiring"><img src="photos/so101-2.jpg" width="1000" height="1333" alt="Leader arm close-up: the shoulder and elbow motors with the servo wiring" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="2" aria-label="Enlarge photo 3: Leader arm at full height with its handle and trigger"><img src="photos/so101-3.jpg" width="1000" height="1333" alt="Leader arm at full height with its handle and trigger" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="3" aria-label="Enlarge photo 4: Follower arm at full height, clamped to the workbench"><img src="photos/so101-4.jpg" width="1000" height="1333" alt="Follower arm at full height, clamped to the workbench" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="4" aria-label="Enlarge photo 5: Follower arm upright with the leader arm beside it"><img src="photos/so101-5.jpg" width="1000" height="1333" alt="Follower arm upright with the leader arm beside it" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="5" aria-label="Enlarge photo 6: Leader arm folded down and clamped to the desk"><img src="photos/so101-6.jpg" width="1000" height="1333" alt="Leader arm folded down and clamped to the desk" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="6" aria-label="Enlarge photo 7: Follower arm close-up: wrist motor and gripper"><img src="photos/so101-7.jpg" width="1000" height="1333" alt="Follower arm close-up: wrist motor and gripper" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="7" aria-label="Enlarge photo 8: Follower arm folded, with the gripper open"><img src="photos/so101-8.jpg" width="1000" height="1333" alt="Follower arm folded, with the gripper open" loading="lazy"></button></figure><figure class="rv"><button type="button" data-i="8" aria-label="Enlarge photo 9: Follower arm upright next to the leader arm"><img src="photos/so101-9.jpg" width="1000" height="1333" alt="Follower arm upright next to the leader arm" loading="lazy"></button></figure></div>
+</div></section>
+
+<div class="so-lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous">‹</button><img alt=""><button class="nx" aria-label="Next">›</button><p></p></div>
 
 <section><div class="wrap">
 <p class="eyebrow rv">The kit</p><h2 class="rv">What goes into a pair</h2>
@@ -206,6 +247,16 @@
 </main>
 <footer><div class="wrap">© <span id="y"></span> <a href="../../">Ajay Ummadi</a> · <a href="mailto:ummadi.ajay@gmail.com">ummadi.ajay@gmail.com</a> · <a href="tel:+919493989713">+91 94939 89713</a></div></footer>
 <script src="../../site.js"></script>
+<script>
+(function(){const C=["Follower arm (white) and leader arm (teal) standing side by side on my desk", "Leader arm close-up: the shoulder and elbow motors with the servo wiring", "Leader arm at full height with its handle and trigger", "Follower arm at full height, clamped to the workbench", "Follower arm upright with the leader arm beside it", "Leader arm folded down and clamped to the desk", "Follower arm close-up: wrist motor and gripper", "Follower arm folded, with the gripper open", "Follower arm upright next to the leader arm"],lb=document.getElementById('lb');if(!lb)return;const im=lb.querySelector('img'),p=lb.querySelector('p');let i=0,last=null;
+function show(n){i=(n+C.length)%C.length;im.src='photos/so101-'+(i+1)+'.jpg';im.alt=C[i];p.textContent=(i+1)+' / '+C.length+' · '+C[i]}
+function open(n){last=document.activeElement;show(n);lb.hidden=false;document.body.style.overflow='hidden';lb.querySelector('.x').focus()}
+function close(){lb.hidden=true;document.body.style.overflow='';last&&last.focus()}
+document.querySelectorAll('.so-gal button').forEach(b=>b.addEventListener('click',()=>open(+b.dataset.i)));
+lb.querySelector('.x').onclick=close;lb.querySelector('.pv').onclick=()=>show(i-1);lb.querySelector('.nx').onclick=()=>show(i+1);
+lb.addEventListener('click',e=>{if(e.target===lb)close()});
+addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});})();
+</script>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
 import * as THREE from 'three';
@@ -222,7 +273,7 @@ function fail(err){console.warn(err);loadTxt.textContent='3D view is not availab
 async function init(){
  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
  renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
- renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
+ renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.82;
  stageEl.appendChild(renderer.domElement);
  const scene=new THREE.Scene();
  const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(new RoomEnvironment(),0.04).texture;
@@ -245,7 +296,7 @@ async function init(){
   return toCreasedNormals(g,0.6)}
  const rig=new THREE.Group();rig.rotation.x=-Math.PI/2;rig.scale.setScalar(11);scene.add(rig);
  const gs={},sum={},cnt={};
- const mPrint=new THREE.MeshStandardMaterial({color:0xf1f3f7,roughness:.42,metalness:0}),mMotor=new THREE.MeshStandardMaterial({color:0x151a26,roughness:.38,metalness:.35});
+ const mPrint=new THREE.MeshStandardMaterial({color:0xfbfcfe,roughness:.5,metalness:0}),mMotor=new THREE.MeshStandardMaterial({color:0x151a26,roughness:.38,metalness:.35});
  const meshes=[];
  for(const p of parts){const g=p.g;gs[g]=gs[g]||new THREE.Group();rig.add(gs[g]);
   const m=new THREE.Mesh(geos[p.mesh],(p.motor?mMotor:mPrint).clone());m.matrixAutoUpdate=false;m.matrix.fromArray(p.m);m.castShadow=true;m.receiveShadow=true;m.userData.g=g;gs[g].add(m);meshes.push(m);
@@ -259,7 +310,7 @@ async function init(){
  ids.forEach(g=>gs[g].position.copy(OFF[g]));rig.updateMatrixWorld(true);
  const box=new THREE.Box3().setFromObject(rig);const sph=box.getBoundingSphere(new THREE.Sphere());
  ids.forEach(g=>gs[g].position.set(0,0,0));rig.updateMatrixWorld(true);
- const ground=new THREE.Mesh(new THREE.PlaneGeometry(60,60),new THREE.ShadowMaterial({opacity:.18}));ground.rotation.x=-Math.PI/2;ground.position.y=box.min.y-.35;ground.receiveShadow=true;scene.add(ground);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(60,60),new THREE.ShadowMaterial({opacity:.32}));ground.rotation.x=-Math.PI/2;ground.position.y=box.min.y-.35;ground.receiveShadow=true;scene.add(ground);
  const target=sph.center.clone();ctl.target.copy(target);
  const dir=new THREE.Vector3(.62,.34,.7).normalize();
  function fit(){const a=cam.aspect,vf=cam.fov*Math.PI/180,hf=2*Math.atan(Math.tan(vf/2)*a);const d=sph.radius/Math.sin(Math.min(vf,hf)/2)*0.92;cam.position.copy(target).addScaledVector(dir,d);ctl.maxDistance=d*1.8;ctl.minDistance=d*.35;ctl.update()}
