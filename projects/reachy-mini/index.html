@@ -154,6 +154,32 @@
 .rm-photo img{width:100%;height:auto;display:block;border-radius:26px;border:1px solid var(--line);box-shadow:0 30px 70px -25px #000}
 .rm-photo figcaption{margin-top:10px;text-align:center;color:var(--muted);font-size:.85rem}
 @media(max-width:780px){.rm-hero .wrap{grid-template-columns:1fr}.rm-photo{max-width:380px;margin:0 auto;order:-1}}
+
+.xv-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.xv-fig{display:flex;justify-content:center}
+.xv-svg{width:100%;max-width:520px;height:auto;overflow:visible}
+.xv-svg .pt{transition:transform 1.1s cubic-bezier(.2,.8,.2,1),filter .25s,opacity .3s;transform:translateY(var(--dy));outline:none;cursor:pointer}
+.xv-wrap.in .pt{transform:none}
+.xv-svg .pt line,.xv-svg .pt path[fill=none]{stroke:var(--text);stroke-width:2;opacity:.8;fill:none}
+.xv-svg .pt .strut{stroke:var(--muted);stroke-width:5;stroke-linecap:round}
+.xv-svg .w{fill:#f3f5fa;stroke:#c8d0e0;stroke-width:2}
+.xv-svg .k{fill:#171c28;stroke:#3a4358;stroke-width:2}
+.xv-svg .d{fill:#aab3c6}.xv-svg .g{fill:#6b7690}.xv-svg .m{fill:#232a3a;stroke:#4a556e}
+.xv-svg .lb{opacity:0;transition:opacity .6s .9s,color .2s;cursor:pointer;color:var(--muted)}
+.xv-wrap.in .lb{opacity:1}
+.xv-svg .lb line{stroke:currentColor;stroke-width:1;opacity:.6}
+.xv-svg .lb circle{fill:var(--bg);stroke:currentColor;stroke-width:1.5}
+.xv-svg .lb text{fill:currentColor}
+.xv-svg .nm{font:600 11px 'Space Grotesk',sans-serif;letter-spacing:.12em}
+.xv-svg .num{font:600 10px 'Space Grotesk',sans-serif}
+.xv-svg .pt.on{filter:drop-shadow(0 0 14px var(--b))}
+.xv-svg .lb.on{color:var(--a)}.xv-svg .lb.on circle{fill:color-mix(in srgb,var(--a) 25%,var(--bg))}
+.xv-list{list-style:none;padding:0;display:grid;gap:6px}
+.xv-list li{display:flex;gap:14px;align-items:center;padding:8px 12px;border:1px solid transparent;border-radius:12px;transition:.2s;cursor:pointer;outline:none}
+.xv-list li .n{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:600 .78rem 'Space Grotesk';color:var(--muted)}
+.xv-list li b{display:block;font:600 .95rem 'Space Grotesk'}.xv-list li span:not(.n){color:var(--muted);font-size:.88rem}
+.xv-list li.on{border-color:var(--line);background:var(--card)}.xv-list li.on .n{border-color:var(--a);color:var(--a)}
+@media(max-width:780px){.xv-wrap{grid-template-columns:1fr}.xv-fig{order:-1}}
 </style>
 </head>
 <body>
@@ -171,6 +197,17 @@
 <div class="btns rv"><a class="btn primary" href="#app">The app I'm building ↓</a><a class="btn" href="https://huggingface.co/blog/reachy-mini" target="_blank" rel="noopener">About Reachy Mini</a></div>
 </div>
 <figure class="rv rm-photo"><img src="reachy-mini.jpg" width="960" height="1280" alt="A white Reachy Mini robot with round camera eyes and an antenna, assembled by Ajay Ummadi, on a workbench" fetchpriority="high"><figcaption>My assembled Reachy Mini</figcaption></figure>
+</div></section>
+
+<section id="build"><div class="wrap xv-wrap rv">
+<div>
+<p class="eyebrow">Build it yourself</p>
+<h2 style="font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin:6px 0 16px">I built mine, <span class="grad">part by part.</span></h2>
+<p class="muted" style="max-width:480px;margin-bottom:18px">Reachy Mini comes as a kit you assemble yourself. Here are the seven groups of parts I put together, from the antennas down to the base. Hover a part or a name to see what it does.</p>
+<div class="chips big" style="margin:0 0 22px"><span class="chip">Kit you assemble</span><span class="chip">Everything in the box</span><span class="chip">No soldering</span></div>
+<ol class="xv-list"><li data-p="1" tabindex="0"><span class="n">1</span><div><b>Antennas</b><span>Two springy antennas that give the robot its expressive character.</span></div></li><li data-p="2" tabindex="0"><span class="n">2</span><div><b>Head</b><span>The rounded head shell that sits on top of the neck.</span></div></li><li data-p="3" tabindex="0"><span class="n">3</span><div><b>Electronics</b><span>The camera and the board behind its eyes.</span></div></li><li data-p="4" tabindex="0"><span class="n">4</span><div><b>Body</b><span>The outer shell that wraps the mechanism.</span></div></li><li data-p="5" tabindex="0"><span class="n">5</span><div><b>Neck</b><span>The linkage that lets the head tilt and turn.</span></div></li><li data-p="6" tabindex="0"><span class="n">6</span><div><b>Motors</b><span>The motors that drive the head's movement.</span></div></li><li data-p="7" tabindex="0"><span class="n">7</span><div><b>Base</b><span>The weighted base that keeps it steady on the desk.</span></div></li></ol>
+</div>
+<div class="xv-fig"><svg viewBox="0 0 560 800" class="xv-svg" role="group" aria-label="Exploded view of a Reachy Mini showing seven parts"><g class="lb" data-p="1"><line x1="124" y1="90" x2="205" y2="90"/><circle cx="112" cy="90" r="9"/><text class="num" x="112" y="93.5" text-anchor="middle">1</text><text class="nm" x="98" y="94" text-anchor="end">ANTENNAS</text></g><g class="lb" data-p="2"><line x1="318" y1="221" x2="398" y2="221"/><circle cx="410" cy="221" r="9"/><text class="num" x="410" y="224.5" text-anchor="middle">2</text><text class="nm" x="426" y="225">HEAD</text></g><g class="lb" data-p="3"><line x1="124" y1="325" x2="205" y2="325"/><circle cx="112" cy="325" r="9"/><text class="num" x="112" y="328.5" text-anchor="middle">3</text><text class="nm" x="98" y="329" text-anchor="end">ELECTRONICS</text></g><g class="lb" data-p="4"><line x1="318" y1="440" x2="398" y2="440"/><circle cx="410" cy="440" r="9"/><text class="num" x="410" y="443.5" text-anchor="middle">4</text><text class="nm" x="426" y="444">BODY</text></g><g class="lb" data-p="5"><line x1="124" y1="555" x2="205" y2="555"/><circle cx="112" cy="555" r="9"/><text class="num" x="112" y="558.5" text-anchor="middle">5</text><text class="nm" x="98" y="559" text-anchor="end">NECK</text></g><g class="lb" data-p="6"><line x1="318" y1="645" x2="398" y2="645"/><circle cx="410" cy="645" r="9"/><text class="num" x="410" y="648.5" text-anchor="middle">6</text><text class="nm" x="426" y="649">MOTORS</text></g><g class="lb" data-p="7"><line x1="124" y1="735" x2="205" y2="735"/><circle cx="112" cy="735" r="9"/><text class="num" x="112" y="738.5" text-anchor="middle">7</text><text class="nm" x="98" y="739" text-anchor="end">BASE</text></g><g class="pt" data-p="1" style="--dy:230px" tabindex="0" role="img" aria-label="1. Antennas"><line x1="238" y1="20" x2="238" y2="98"/><path d="M238 98l-6 5 12 6-12 6 12 6-6 5" fill="none"/><circle cx="238" cy="150" r="9" class="w"/><line x1="296" y1="20" x2="296" y2="98"/><path d="M296 98l-6 5 12 6-12 6 12 6-6 5" fill="none"/><circle cx="296" cy="150" r="9" class="w"/></g><g class="pt" data-p="2" style="--dy:170px" tabindex="0" role="img" aria-label="2. Head"><rect x="205" y="190" width="112" height="64" rx="28" class="w"/><circle cx="232" cy="222" r="6" class="d"/><circle cx="290" cy="222" r="6" class="d"/></g><g class="pt" data-p="3" style="--dy:120px" tabindex="0" role="img" aria-label="3. Electronics"><rect x="222" y="338" width="78" height="9" rx="3" class="w"/><circle cx="238" cy="322" r="17" class="k"/><circle cx="238" cy="322" r="7" class="g"/><circle cx="284" cy="322" r="17" class="k"/><circle cx="284" cy="322" r="7" class="g"/><rect x="254" y="318" width="16" height="9" rx="3" class="k"/></g><g class="pt" data-p="4" style="--dy:70px" tabindex="0" role="img" aria-label="4. Body"><path d="M200 405 Q260 385 322 405 L338 478 Q262 505 184 478 Z" class="w"/><circle cx="262" cy="448" r="5" class="d"/></g><g class="pt" data-p="5" style="--dy:20px" tabindex="0" role="img" aria-label="5. Neck"><line x1="222" y1="595" x2="244" y2="522" class="strut"/><line x1="300" y1="595" x2="280" y2="522" class="strut"/><line x1="262" y1="595" x2="262" y2="522" class="strut"/><circle cx="244" cy="522" r="5" class="k"/><circle cx="280" cy="522" r="5" class="k"/><circle cx="262" cy="522" r="5" class="k"/></g><g class="pt" data-p="6" style="--dy:-20px" tabindex="0" role="img" aria-label="6. Motors"><rect x="200" y="622" width="124" height="44" rx="9" class="k"/><circle cx="232" cy="644" r="9" class="g"/><circle cx="292" cy="644" r="9" class="g"/><rect x="250" y="632" width="24" height="24" rx="5" class="m"/></g><g class="pt" data-p="7" style="--dy:-60px" tabindex="0" role="img" aria-label="7. Base"><path d="M186 705 Q262 800 338 705 Z" class="w"/><circle cx="262" cy="725" r="5" class="d"/></g></svg></div>
 </div></section>
 
 <section><div class="wrap">
@@ -196,5 +233,14 @@
 </main>
 <footer><div class="wrap">© <span id="y"></span> <a href="../../">Ajay Ummadi</a> · <a href="mailto:ummadi.ajay@gmail.com">ummadi.ajay@gmail.com</a> · <a href="tel:+919493989713">+91 94939 89713</a></div></footer>
 <script src="../../site.js"></script>
+<script>
+(function(){const w=document.querySelector('.xv-wrap');if(!w)return;
+const q=(s)=>w.querySelectorAll(s);
+function set(n,on){q('[data-p="'+n+'"]').forEach(e=>e.classList.toggle('on',on))}
+q('[data-p]').forEach(e=>{const n=e.dataset.p;
+ e.addEventListener('mouseenter',()=>set(n,true));e.addEventListener('mouseleave',()=>set(n,false));
+ e.addEventListener('focus',()=>set(n,true));e.addEventListener('blur',()=>set(n,false))});})();
+</script>
+
 </body>
 </html>
