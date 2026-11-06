@@ -1,0 +1,5 @@
+These meshes are derived from the SO-101 CAD in TheRobotStudio/SO-ARM100
+(https://github.com/TheRobotStudio/SO-ARM100), licensed under the Apache License 2.0.
+Modifications: binary STL files were converted to a compact quantized indexed-mesh
+format (.bin) and the assembled zero-pose transforms were baked into parts.json.
+Original design (c) The Robot Studio. This page is not endorsed by The Robot Studio or Hugging Face.

@@ -13,6 +13,8 @@ Canonical page: https://makerworkslab.in/ajayummadi/
 
 - Reachy Mini: Ajay assembled his own Reachy Mini (open-source expressive desktop robot) and is planning a new app for it to publish on Hugging Face (planned, not released). https://makerworkslab.in/ajayummadi/projects/reachy-mini/
 
+- LeRobot SO-101 Arms: Ajay assembled a leader and follower SO-101 pair and published an interactive 3D exploded view of the arm built from the official CAD (Apache-2.0). https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/
+
 ## Background
 - Associate Consultant, Atos Syntel (Oct 2022 - Aug 2023)
 - Education: Osmania University; Acharya Nagarjuna University
