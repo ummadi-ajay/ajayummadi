@@ -11,6 +11,8 @@ Canonical page: https://makerworkslab.in/ajayummadi/
 
 - MakerWorks Lab: https://makerworkslab.in/ajayummadi/projects/makerworks-lab/
 
+- Reachy Mini: Ajay assembled his own Reachy Mini (open-source expressive desktop robot) and is planning a new app for it to publish on Hugging Face (planned, not released). https://makerworkslab.in/ajayummadi/projects/reachy-mini/
+
 ## Background
 - Associate Consultant, Atos Syntel (Oct 2022 - Aug 2023)
 - Education: Osmania University; Acharya Nagarjuna University
