@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeRobot Training Monitor: Live Terminal Dashboard for lerobot-train | Ajay Ummadi</title>
+<meta name="description" content="A live terminal dashboard for lerobot-train in about 280 lines of Python: progress bar, ETA, loss and gradient-norm plots and a trend indicator.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Ajay Ummadi">
+<meta name="keywords" content="LeRobot, lerobot-train, training monitor, terminal dashboard, loss plot, gradient norm, Python">
+<link rel="canonical" href="https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Ajay Ummadi">
+<meta property="og:title" content="LeRobot Training Monitor: Live Terminal Dashboard for lerobot-train"><meta property="og:description" content="A live terminal dashboard for lerobot-train in about 280 lines of Python: progress bar, ETA, loss and gradient-norm plots and a trend indicator.">
+<meta property="og:url" content="https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/"><meta property="og:image" content="https://makerworkslab.in/ajayummadi/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="LeRobot Training Monitor: Live Terminal Dashboard for lerobot-train">
+<meta name="twitter:description" content="A live terminal dashboard for lerobot-train in about 280 lines of Python: progress bar, ETA, loss and gradient-norm plots and a trend indicator."><meta name="twitter:image" content="https://makerworkslab.in/ajayummadi/og-image.png">
+<meta name="theme-color" content="#070a12">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/",
+   "url": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/",
+   "name": "LeRobot Training Monitor: Live Terminal Dashboard for lerobot-train",
+   "isPartOf": {
+    "@id": "https://makerworkslab.in/ajayummadi/#website"
+   },
+   "mainEntity": {
+    "@id": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/#project"
+   },
+   "dateModified": "2026-11-06",
+   "breadcrumb": {
+    "@id": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/#crumbs"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Ajay Ummadi",
+     "item": "https://makerworkslab.in/ajayummadi/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Projects",
+     "item": "https://makerworkslab.in/ajayummadi/#projects"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "LeRobot Training Monitor: Live Terminal Dashboard for lerobot-train",
+     "item": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/"
+    }
+   ],
+   "@id": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/#crumbs"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "applicationCategory": "DeveloperApplication",
+   "operatingSystem": "Linux, macOS, Windows",
+   "isBasedOn": "https://github.com/huggingface/lerobot",
+   "@id": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/#project",
+   "url": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/",
+   "name": "LeRobot Training Monitor: Live Terminal Dashboard for lerobot-train",
+   "description": "A live terminal dashboard for lerobot-train in about 280 lines of Python: progress bar, ETA, loss and gradient-norm plots and a trend indicator.",
+   "creator": {
+    "@id": "https://makerworkslab.in/ajayummadi/#person"
+   },
+   "author": {
+    "@id": "https://makerworkslab.in/ajayummadi/#person"
+   },
+   "keywords": "LeRobot, lerobot-train, training monitor, terminal dashboard, loss plot, gradient norm, Python",
+   "inLanguage": "en",
+   "image": "https://makerworkslab.in/ajayummadi/og-image.png",
+   "mainEntityOfPage": "https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/"
+  },
+  {
+   "@type": "Person",
+   "@id": "https://makerworkslab.in/ajayummadi/#person",
+   "name": "Ajay Ummadi",
+   "url": "https://makerworkslab.in/ajayummadi/",
+   "sameAs": [
+    "https://www.linkedin.com/in/ajayummadi/",
+    "https://www.youtube.com/@MakerWorkslab",
+    "https://github.com/ummadi-ajay"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What does the Training Monitor do?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It tails the lerobot-train log and shows a progress bar, ETA, loss and gradient-norm plots and a trend indicator in the terminal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How big is it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "About 280 lines of Python."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="bg"><i></i><i></i><i></i></div>
+<nav aria-label="Main"><div class="wrap"><a class="logo" href="../../" style="text-decoration:none">AU.</a>
+<ul><li><a href="../../">Home</a></li><li><a href="../../#projects">Projects</a></li><li><a href="../../#videos">Videos</a></li><li><a href="../../#contact">Contact</a></li></ul></div></nav>
+<main>
+<div class="wrap" style="padding-top:28px"><p class="muted" style="font-size:.88rem"><a href="../../">Ajay Ummadi</a> › <a href="../../#projects">Projects</a> › LeRobot Training Monitor: Live Terminal Dashboard for lerobot-train</p></div>
+<section><div class="wrap">
+<p class="eyebrow rv">Project</p><h1 class="rv" style="font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;margin:6px 0 30px">LeRobot Training Monitor</h1>
+<p class="muted rv" style="max-width:740px;margin:-12px 0 22px">A live terminal dashboard for <code>lerobot-train</code>, written in about 280 lines of Python by Ajay Ummadi. It tails the training log and shows what matters while a policy trains.</p>
+<div class="chips big rv" style="margin:0 0 26px"><span class="chip">Python</span><span class="chip">Terminal UI</span><span class="chip">LeRobot</span></div>
+<div class="grid">
+<div class="card rv"><div class="ico">⏳</div><h3>Progress and ETA</h3><p>A progress bar and estimated time remaining for the training run.</p></div>
+<div class="card rv"><div class="ico">📉</div><h3>Loss and gradient-norm plots</h3><p>Live plots in the terminal so you can see whether training is healthy.</p></div>
+<div class="card rv"><div class="ico">🧭</div><h3>Trend indicator</h3><p>A quick signal showing whether the loss is improving.</p></div>
+</div>
+<p class="muted rv" style="margin-top:22px;max-width:740px;font-size:.85rem"><b>Credit:</b> built for LeRobot by Hugging Face (Apache-2.0); a separate add-on, not part of or endorsed by LeRobot.</p>
+</div></section>
+<section><div class="wrap"><p class="eyebrow rv">FAQ</p><h2 class="rv">Questions</h2><div class="grid" style="grid-template-columns:1fr"><details class="card rv"><summary style="cursor:pointer;font-weight:600">What does the Training Monitor do?</summary><p style="margin-top:10px">It tails the lerobot-train log and shows a progress bar, ETA, loss and gradient-norm plots and a trend indicator in the terminal.</p></details><details class="card rv"><summary style="cursor:pointer;font-weight:600">How big is it?</summary><p style="margin-top:10px">About 280 lines of Python.</p></details></div></div></section>
+<section><div class="wrap"><div class="cta rv"><p class="eyebrow">More</p><h2>Other projects</h2><div class="btns"><a class="btn primary" href="../../">Back to portfolio</a><a class="btn" href="../so-101-teleoperation-studio/">SO-101 Studio</a><a class="btn" href="../makerworks-lab/">MakerWorks Lab</a><a class="btn" href="https://www.linkedin.com/in/ajayummadi/" target="_blank" rel="noopener">LinkedIn</a></div></div></div></section>
+</main>
+<footer><div class="wrap">© <span id="y"></span> <a href="../../">Ajay Ummadi</a> · <a href="mailto:makerworkslab@gmail.com">makerworkslab@gmail.com</a></div></footer>
+<script src="../../site.js"></script>
+</body>
+</html>

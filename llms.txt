@@ -5,9 +5,11 @@
 Canonical page: https://makerworkslab.in/ajayummadi/
 
 ## Projects
-- SO-101 Teleoperation Studio: local web dashboard and Three.js 3D digital twin for SO-101 leader/follower robot arm teleoperation on top of LeRobot (60 Hz loop, telemetry, CSV recording, calibration manager). Separate add-on, not endorsed by LeRobot. Backend and 3D twin written with Claude Code; UI redesign and product direction by Ajay Ummadi. https://makerworkslab.in/ajayummadi/#studio
-- Open-Ear Wired Earbuds: parametric Blender Python design for 3D-printed wired open-ear earphones around a salvaged driver, plus a cable-reel case. Both ears printed and worn; sound quality and case not yet tested. https://makerworkslab.in/ajayummadi/#earbuds
-- LeRobot Training Monitor: live terminal dashboard for lerobot-train (progress, ETA, loss and gradient-norm plots), about 280 lines of Python.
+- SO-101 Teleoperation Studio: local web dashboard and Three.js 3D digital twin for SO-101 leader/follower robot arm teleoperation on top of LeRobot (60 Hz loop, telemetry, CSV recording, calibration manager). Separate add-on, not endorsed by LeRobot. Backend and 3D twin written with Claude Code; UI redesign and product direction by Ajay Ummadi. https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/
+- Open-Ear Wired Earbuds: parametric Blender Python design for 3D-printed wired open-ear earphones around a salvaged driver, plus a cable-reel case. Both ears printed and worn; sound quality and case not yet tested. https://makerworkslab.in/ajayummadi/projects/open-ear-earbuds/
+- LeRobot Training Monitor: live terminal dashboard for lerobot-train (progress, ETA, loss and gradient-norm plots), about 280 lines of Python. https://makerworkslab.in/ajayummadi/projects/lerobot-training-monitor/
+
+- MakerWorks Lab: https://makerworkslab.in/ajayummadi/projects/makerworks-lab/
 
 ## Background
 - Associate Consultant, Atos Syntel (Oct 2022 - Aug 2023)

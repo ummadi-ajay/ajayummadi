@@ -202,93 +202,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#070a12;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.09);--text:#eef2fa;--muted:#9aa7bf;--a:#34d399;--b:#38bdf8;--c:#a78bfa}
-@media(prefers-color-scheme:light){:root{--bg:#f5f7fc;--card:rgba(255,255,255,.75);--line:rgba(15,23,42,.1);--text:#0f172a;--muted:#55627a;--a:#059669;--b:#0284c7;--c:#7c3aed}}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{font:16px/1.65 Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
-h1,h2,h3,.logo{font-family:'Space Grotesk',Inter,sans-serif}
-a{color:inherit}
-.wrap{max-width:1020px;margin:0 auto;padding:0 20px;position:relative}
-/* animated background */
-.bg{position:fixed;inset:0;z-index:-1;overflow:hidden}
-.bg i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.28;animation:float 18s ease-in-out infinite}
-.bg i:nth-child(1){width:520px;height:520px;background:var(--a);top:-120px;left:-100px}
-.bg i:nth-child(2){width:480px;height:480px;background:var(--c);top:30%;right:-140px;animation-delay:-6s}
-.bg i:nth-child(3){width:420px;height:420px;background:var(--b);bottom:-120px;left:30%;animation-delay:-12s}
-.bg::after{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 75%)}
-@keyframes float{50%{transform:translate(40px,50px) scale(1.1)}}
-/* nav */
-nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font-weight:700;font-size:1.2rem;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
-nav ul{display:flex;gap:22px;list-style:none;padding:0}
-.hero,#contact{scroll-margin-top:60px}
-nav ul a{text-decoration:none;color:var(--muted);font-size:.92rem;transition:.2s}
-nav ul a:hover{color:var(--text)}
-/* hero */
-.hero{padding:90px 0 80px}
-.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-.tag{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 16px;font-size:.85rem;margin-bottom:22px}
-.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--a);box-shadow:0 0 0 0 var(--a);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}}
-h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.04;letter-spacing:-.035em}
-.grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
-@keyframes shine{to{background-position:200%}}
-.role{font-family:'Space Grotesk';font-size:1.25rem;color:var(--muted);margin-top:14px;min-height:1.9em}
-.role b{color:var(--text);font-weight:500}
-.lead{color:var(--muted);font-size:1.08rem;max-width:560px;margin:18px 0 32px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:12px 24px;border-radius:12px;text-decoration:none;font-weight:600;border:1px solid var(--line);background:var(--card);transition:.25s}
-.btn:hover{transform:translateY(-3px);border-color:var(--a)}
-.btn.primary{background:linear-gradient(90deg,var(--a),var(--b));color:#04130f;border:0;box-shadow:0 8px 28px -8px var(--a)}
-/* robot avatar */
-.avatar{display:flex;justify-content:center}
-.avatar svg{width:min(320px,100%);filter:drop-shadow(0 20px 50px color-mix(in srgb,var(--b) 40%,transparent));animation:bob 5s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-14px)}}
-.eye{animation:blink 5s infinite;transform-origin:center;transform-box:fill-box}
-@keyframes blink{94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:-10px}
-.stat{text-align:center;padding:22px 10px;border:1px solid var(--line);background:var(--card);border-radius:16px;backdrop-filter:blur(8px)}
-.stat b{display:block;font:700 1.9rem 'Space Grotesk';background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat span{color:var(--muted);font-size:.88rem}
-/* sections */
-section{padding:84px 0 0;scroll-margin-top:60px}
-.eyebrow{color:var(--a);font:500 .85rem 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase}
-h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.025em;margin:6px 0 30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
-.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;backdrop-filter:blur(8px);transition:.3s;overflow:hidden}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--x,50%) var(--y,0%),color-mix(in srgb,var(--b) 18%,transparent),transparent 45%);opacity:0;transition:.3s}
-.card:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--b) 50%,var(--line))}
-.card:hover::before{opacity:1}
-.card>*{position:relative}
-.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px;background:linear-gradient(135deg,color-mix(in srgb,var(--a) 28%,transparent),color-mix(in srgb,var(--c) 28%,transparent))}
-.card h3{font-size:1.12rem;margin-bottom:6px}
-.card p,.muted{color:var(--muted);font-size:.95rem}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:4px 13px;font-size:.82rem;color:var(--muted);transition:.2s}
-.chip:hover{color:var(--text);border-color:var(--a)}
-.chips.big .chip{font-size:.92rem;padding:7px 18px;color:var(--text)}
-/* timeline */
-.timeline{position:relative;padding-left:30px;display:grid;gap:22px}
-.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--a),var(--b),var(--c))}
-.item{position:relative}
-.item::before{content:"";position:absolute;left:-30px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--a);box-shadow:0 0 14px var(--a)}
-.item small{color:var(--b);font-weight:600;font-size:.82rem;letter-spacing:.04em}
-.item h3{margin:4px 0 6px}
-/* contact */
-.cta{text-align:center;padding:60px 24px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,color-mix(in srgb,var(--a) 14%,transparent),color-mix(in srgb,var(--c) 14%,transparent));backdrop-filter:blur(10px)}
-.cta h2{margin-bottom:10px}
-.cta .btns{justify-content:center;margin-top:26px}
-footer{padding:50px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
-/* reveal */
-.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
-.rv.in{opacity:1;transform:none}
-@media(max-width:780px){.hero .wrap{grid-template-columns:1fr}.avatar{order:-1}.avatar svg{width:200px}.hero{padding:50px 0}nav ul{gap:14px}nav ul a{font-size:.82rem}nav ul{overflow-x:auto;white-space:nowrap;scrollbar-width:none}.logo{display:none}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="bg"><i></i><i></i><i></i></div>
@@ -366,10 +280,10 @@ footer{padding:50px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
 <section id="projects"><div class="wrap">
 <p class="eyebrow rv">Work</p><h2 class="rv">Projects</h2>
 <div class="grid">
-<div class="card rv"><div class="ico">🎧</div><h3>3D-Printed Open-Ear Earphones</h3><p>Wired open-ear earphones built around a salvaged driver, designed in one parametric Blender script. Both ears printed and worn. <a href="#earbuds" style="color:var(--b)">Read the build →</a></p><div class="chips"><span class="chip">Blender Python</span><span class="chip">3D Printing</span><span class="chip">Product</span></div></div>
-<div class="card rv"><div class="ico">🖥️</div><h3>SO-101 Teleoperation Studio</h3><p>A web dashboard and 3D digital twin for SO-101 leader/follower arm teleoperation, on top of LeRobot. <a href="#studio" style="color:var(--b)">Read more →</a></p><div class="chips"><span class="chip">Python</span><span class="chip">Three.js</span><span class="chip">LeRobot</span></div></div>
-<div class="card rv"><div class="ico">📈</div><h3>LeRobot Training Monitor</h3><p>A live terminal dashboard for <code>lerobot-train</code>: progress bar, ETA, loss and gradient-norm plots, and a trend indicator. About 280 lines of Python.</p><div class="chips"><span class="chip">Python</span><span class="chip">Terminal UI</span></div></div>
-<div class="card rv"><div class="ico">🏭</div><h3>MakerWorks Lab</h3><p>A robotics and Physical AI maker space in Mumbai, with structured programmes, memberships and competition teams.</p><div class="chips"><span class="chip">Founder</span><span class="chip">Education</span></div></div>
+<div class="card rv"><div class="ico">🎧</div><h3>3D-Printed Open-Ear Earphones</h3><p>Wired open-ear earphones built around a salvaged driver, designed in one parametric Blender script. Both ears printed and worn. <a href="projects/open-ear-earbuds/" style="color:var(--b)">Read the build →</a></p><div class="chips"><span class="chip">Blender Python</span><span class="chip">3D Printing</span><span class="chip">Product</span></div></div>
+<div class="card rv"><div class="ico">🖥️</div><h3>SO-101 Teleoperation Studio</h3><p>A web dashboard and 3D digital twin for SO-101 leader/follower arm teleoperation, on top of LeRobot. <a href="projects/so-101-teleoperation-studio/" style="color:var(--b)">Read more →</a></p><div class="chips"><span class="chip">Python</span><span class="chip">Three.js</span><span class="chip">LeRobot</span></div></div>
+<div class="card rv"><div class="ico">📈</div><h3>LeRobot Training Monitor</h3><p>A live terminal dashboard for <code>lerobot-train</code>: progress bar, ETA, loss and gradient-norm plots, and a trend indicator. <a href="projects/lerobot-training-monitor/" style="color:var(--b)">Read more →</a></p><div class="chips"><span class="chip">Python</span><span class="chip">Terminal UI</span></div></div>
+<div class="card rv"><div class="ico">🏭</div><h3>MakerWorks Lab</h3><p>A robotics and Physical AI maker space in Mumbai, with structured programmes, memberships and competition teams. <a href="projects/makerworks-lab/" style="color:var(--b)">Read more →</a></p><div class="chips"><span class="chip">Founder</span><span class="chip">Education</span></div></div>
 <div class="card rv"><div class="ico">🦾</div><h3>LeRobot Arms</h3><p>Hands-on robot-arm learning built on Hugging Face's LeRobot: teleoperation, data collection and imitation learning.</p><div class="chips"><span class="chip">LeRobot</span><span class="chip">Robot Learning</span></div></div>
 <div class="card rv"><div class="ico">🤖</div><h3>Reachy Mini</h3><p>Embodied AI programmes on the open-source Reachy Mini robot, covering vision and interaction.</p><div class="chips"><span class="chip">Embodied AI</span><span class="chip">Vision</span></div></div>
 <div class="card rv"><div class="ico">🦆</div><h3>OpenDuck Mini V2</h3><p>Building and programming the open-source bipedal duck robot as a hardware and control project.</p><div class="chips"><span class="chip">Hardware</span><span class="chip">Locomotion</span></div></div>
@@ -380,58 +294,16 @@ footer{padding:50px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
 
 <section id="studio"><div class="wrap">
 <p class="eyebrow rv">Featured project</p><h2 class="rv">SO-101 Teleoperation Studio</h2>
-<p class="muted rv" style="max-width:740px;margin:-12px 0 20px">A local web app that runs, monitors and visualizes teleoperation of two SO-101 robot arms: a hand-held leader arm controls a follower arm in real time. It sits on top of the open-source LeRobot library, talks to real hardware, and includes a 3D digital twin of both arms built from the official CAD.</p>
-<div class="chips big rv" style="margin:0 0 26px"><span class="chip">Python (stdlib only)</span><span class="chip">LeRobot</span><span class="chip">Feetech STS3215</span><span class="chip">Three.js</span><span class="chip">Vanilla JS</span></div>
-<div class="stats rv" style="margin:0 0 26px">
-<div class="stat"><b>~3,500</b><span>lines across 5 files</span></div>
-<div class="stat"><b>11</b><span>backend endpoints</span></div>
-<div class="stat"><b>5</b><span>app pages</span></div>
-<div class="stat"><b>16</b><span>mesh files (~18 MB)</span></div>
-</div>
-<div class="grid">
-<div class="card rv"><div class="ico">🎮</div><h3>Live teleoperation</h3><p>Start and stop the 60 Hz leader-to-follower loop from the browser, with an emergency stop on Esc.</p></div>
-<div class="card rv"><div class="ico">📊</div><h3>Live telemetry</h3><p>Loop time, rate, uptime and tracking error, with per-joint bars and history graphs for leader, commanded and actual positions.</p></div>
-<div class="card rv"><div class="ico">⏺️</div><h3>Recording and calibration</h3><p>One-click CSV capture at about 30 Hz, plus a calibration manager that never overwrites a working calibration by accident.</p></div>
-<div class="card rv"><div class="ico">🛡️</div><h3>Safety</h3><p>A per-frame step limit for gentler starts, and hardware errors shown in the UI.</p></div>
-<div class="card rv"><div class="ico">🧊</div><h3>3D digital twin</h3><p>Teal leader and white follower arms driven by live joint data, with soft shadows, glossy servos, animated wires, split and ghost-overlay views and camera presets.</p></div>
-<div class="card rv"><div class="ico">📷</div><h3>Modelled from my setup</h3><p>Red C-clamps, the driver board and the handwritten port labels were placed from measurements of the loaded meshes, not guessed.</p></div>
-</div>
-<h3 class="rv" style="margin:36px 0 14px">Engineering highlights</h3>
-<div class="grid">
-<div class="card rv"><h3>Mirrored-arm bug</h3><p>Leader and follower CAD used different base orientations, so the same joint reading turned them in opposite directions. I found it by measuring joint positions in the running 3D scene, then aligned both arms to a shared frame and added an automatic joint-direction check.</p></div>
-<div class="card rv"><h3>Realistic rendering</h3><p>STL files only carry flat normals, so the loader smooths shallow edges and keeps sharp creases, and lighting comes from a procedural studio environment map.</p></div>
-<div class="card rv"><h3>Real-hardware debugging</h3><p>Resolved a missing motor SDK, a calibration mismatch, and two programs competing for one serial port.</p></div>
-</div>
-<p class="muted rv" style="margin-top:24px;max-width:740px"><b>My role:</b> I set the product direction, supplied the real arms and photos, tested everything on my own hardware, and designed and expanded the front-end UI (the "Teleoperation Cockpit" redesign). The backend, first UI and 3D digital twin were written with Claude Code (Anthropic).</p>
-<p class="muted rv" style="margin-top:12px;max-width:740px;font-size:.85rem"><b>Credits:</b> LeRobot by Hugging Face (Apache-2.0); this project is a separate add-on, not part of or endorsed by LeRobot. SO-101 design, URDFs and STL meshes from TheRobotStudio/SO-ARM100 (Apache-2.0). Three.js (MIT).</p>
+<p class="muted rv" style="max-width:740px;margin:-12px 0 20px">A local web dashboard and 3D digital twin for SO-101 leader/follower robot arm teleoperation, built on the open-source LeRobot library. About 3,500 lines, an 11-endpoint backend and a Three.js twin built from the official CAD.</p>
+<div class="chips big rv" style="margin:0 0 22px"><span class="chip">Python</span><span class="chip">LeRobot</span><span class="chip">Three.js</span><span class="chip">Feetech STS3215</span></div>
+<div class="btns rv"><a class="btn primary" href="projects/so-101-teleoperation-studio/">Read the full project →</a></div>
 </div></section>
 
 <section id="earbuds"><div class="wrap">
 <p class="eyebrow rv">Featured project</p><h2 class="rv">Open-Ear Wired Earbuds: A 3D-Printed Build</h2>
-<p class="muted rv" style="max-width:720px;margin:-12px 0 26px">I designed and 3D-printed wired open-ear earphones around a driver salvaged from a pair of wired earphones, plus a pocket case with a cable reel to stop cords tangling. The pod sits in front of the ear canal and an arm hooks over the ear. Nothing goes into the canal.</p>
-<div class="chips big rv" style="margin:0 0 26px"><span class="chip">Role: design, CAD scripting, printing, fit testing</span><span class="chip">Blender (Python)</span><span class="chip">FDM · PETG / TPU</span><span class="chip">Salvaged driver</span></div>
-<div class="grid">
-<div class="card rv"><div class="ico">⚠️</div><h3>The problem</h3><p>Sealed earbuds block traffic and alarms, get sweaty and tiring, fail within weeks to months when cheap, and tangle in a pocket.</p></div>
-<div class="card rv"><div class="ico">👂</div><h3>The solution</h3><p>A wired, passive open-ear design: no battery, pairing, audio delay or radio. Repairable by reprinting one part, and it reuses a driver that would otherwise be thrown away.</p></div>
-<div class="card rv"><div class="ico">📐</div><h3>Parametric design</h3><p>One Blender script builds the shell and cap with exact booleans. Shell depth is derived from the driver (14.4 mm across, 7.4 mm thick), and one setting mirrors the arm for the other ear. Parts snap together with no glue.</p></div>
-<div class="card rv"><div class="ico">🧵</div><h3>Case with cable reel</h3><p>An oblong clamshell (about 116 × 56 mm) that holds both earbuds and winds both cables onto a reel with one turn of a knob. Designed and overlap-checked in software; not printed yet.</p></div>
-</div>
-<h3 class="rv" style="margin:36px 0 14px">Iterations</h3>
-<div class="timeline">
-<div class="item card rv"><h3>1 · Driver wouldn't fit</h3><p class="muted">Widened the cavity from 13.6 to 15 mm.</p></div>
-<div class="item card rv"><h3>2 · A 3 mm PLA arm snapped</h3><p class="muted">Raised the rise to 14 mm, thickened to 3.5 mm, moved to PETG or TPU.</p></div>
-<div class="item card rv"><h3>3 · Low volume from leakage</h3><p class="muted">Added a mesh front wall and a clamp ring that presses the foam rim to seal front from back.</p></div>
-<div class="item card rv"><h3>4–5 · Cap popping out, then sitting proud</h3><p class="muted">Added a snap groove and ridge, then measured the can (6.6 mm) and made shell depth a formula of driver thickness.</p></div>
-<div class="item card rv"><h3>6–7 · Wrong pointing, bulky look</h3><p class="muted">Regenerated the right ear as a true mirror, then replaced the flat disc with an egg-shaped pod, with slim and compact variants.</p></div>
-</div>
-<h3 class="rv" style="margin:36px 0 14px">Status</h3>
-<div class="grid">
-<div class="card rv"><h3>Printed and worn</h3><p>Flat pod (left ear) and egg pod (right ear). The open-ear fit works.</p></div>
-<div class="card rv"><h3>Generated, not printed</h3><p>Egg pod (left), slim, compact, and the case with reel.</p></div>
-<div class="card rv"><h3>Not tested yet</h3><p>Sound quality and volume with the cap sealed, and the reel and lid fit.</p></div>
-<div class="card rv"><h3>Known issues</h3><p>Glasses temple near the arm, rough support residue at the arm top, and the cable pulls the pod slightly forward.</p></div>
-</div>
-<p class="muted rv" style="margin-top:22px;max-width:720px"><b>Limits:</b> open-ear sound is quieter with less bass than in-ear, so it suits quiet to moderate places. The fit is tuned to my ears. <b>Next:</b> measure the foam, print the left egg shell, test sound with a louder driver, print the case, and pick a final design.</p>
+<p class="muted rv" style="max-width:740px;margin:-12px 0 20px">Wired, passive open-ear earphones designed in one parametric Blender script around a salvaged driver, plus a cable-reel case. Both ears printed and worn.</p>
+<div class="chips big rv" style="margin:0 0 22px"><span class="chip">Blender Python</span><span class="chip">FDM · PETG / TPU</span><span class="chip">Parametric design</span></div>
+<div class="btns rv"><a class="btn primary" href="projects/open-ear-earbuds/">Read the full build →</a></div>
 </div></section>
 
 <section id="videos"><div class="wrap">
@@ -479,15 +351,8 @@ footer{padding:50px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
 
 <footer><div class="wrap">© <span id="y"></span> Ajay Ummadi · Built with curiosity</div></footer>
 
+<script src="site.js"></script>
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
-// reliable in-page navigation (works even when hash links are blocked, e.g. embedded previews)
-document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}}));
-// scroll reveal
-const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-// card spotlight
-document.querySelectorAll('.card').forEach(c=>c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')}));
 // typed role
 const words=['Robotics','Physical AI','Open Source','Maker Education'],t=document.getElementById('typed');
 if(!matchMedia('(prefers-reduced-motion:reduce)').matches){let w=0,i=0,del=false;

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SO-101 Teleoperation Studio: Web Dashboard &amp; 3D Digital Twin for LeRobot | Ajay Ummadi</title>
+<meta name="description" content="A local web dashboard and Three.js 3D digital twin for SO-101 leader/follower robot arm teleoperation on LeRobot: 60 Hz control loop, live telemetry, CSV recording and calibration manager.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Ajay Ummadi">
+<meta name="keywords" content="SO-101, LeRobot, teleoperation, robot arm, digital twin, Three.js, Feetech STS3215, Python, leader follower arm">
+<link rel="canonical" href="https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Ajay Ummadi">
+<meta property="og:title" content="SO-101 Teleoperation Studio: Web Dashboard &amp; 3D Digital Twin for LeRobot"><meta property="og:description" content="A local web dashboard and Three.js 3D digital twin for SO-101 leader/follower robot arm teleoperation on LeRobot: 60 Hz control loop, live telemetry, CSV recording and calibration manager.">
+<meta property="og:url" content="https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/"><meta property="og:image" content="https://makerworkslab.in/ajayummadi/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="SO-101 Teleoperation Studio: Web Dashboard &amp; 3D Digital Twin for LeRobot">
+<meta name="twitter:description" content="A local web dashboard and Three.js 3D digital twin for SO-101 leader/follower robot arm teleoperation on LeRobot: 60 Hz control loop, live telemetry, CSV recording and calibration manager."><meta name="twitter:image" content="https://makerworkslab.in/ajayummadi/og-image.png">
+<meta name="theme-color" content="#070a12">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/",
+   "url": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/",
+   "name": "SO-101 Teleoperation Studio: Web Dashboard & 3D Digital Twin for LeRobot",
+   "isPartOf": {
+    "@id": "https://makerworkslab.in/ajayummadi/#website"
+   },
+   "mainEntity": {
+    "@id": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/#project"
+   },
+   "dateModified": "2026-11-06",
+   "breadcrumb": {
+    "@id": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/#crumbs"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Ajay Ummadi",
+     "item": "https://makerworkslab.in/ajayummadi/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Projects",
+     "item": "https://makerworkslab.in/ajayummadi/#projects"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "SO-101 Teleoperation Studio: Web Dashboard & 3D Digital Twin for LeRobot",
+     "item": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/"
+    }
+   ],
+   "@id": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/#crumbs"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "applicationCategory": "DeveloperApplication",
+   "operatingSystem": "Linux, macOS, Windows",
+   "isBasedOn": "https://github.com/huggingface/lerobot",
+   "@id": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/#project",
+   "url": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/",
+   "name": "SO-101 Teleoperation Studio: Web Dashboard & 3D Digital Twin for LeRobot",
+   "description": "A local web dashboard and Three.js 3D digital twin for SO-101 leader/follower robot arm teleoperation on LeRobot: 60 Hz control loop, live telemetry, CSV recording and calibration manager.",
+   "creator": {
+    "@id": "https://makerworkslab.in/ajayummadi/#person"
+   },
+   "author": {
+    "@id": "https://makerworkslab.in/ajayummadi/#person"
+   },
+   "keywords": "SO-101, LeRobot, teleoperation, robot arm, digital twin, Three.js, Feetech STS3215, Python, leader follower arm",
+   "inLanguage": "en",
+   "image": "https://makerworkslab.in/ajayummadi/og-image.png",
+   "mainEntityOfPage": "https://makerworkslab.in/ajayummadi/projects/so-101-teleoperation-studio/"
+  },
+  {
+   "@type": "Person",
+   "@id": "https://makerworkslab.in/ajayummadi/#person",
+   "name": "Ajay Ummadi",
+   "url": "https://makerworkslab.in/ajayummadi/",
+   "sameAs": [
+    "https://www.linkedin.com/in/ajayummadi/",
+    "https://www.youtube.com/@MakerWorkslab",
+    "https://github.com/ummadi-ajay"
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is the SO-101 Teleoperation Studio?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A local web app that runs, monitors and visualizes teleoperation of two SO-101 robot arms. A hand-held leader arm controls a follower arm in real time, and a 3D digital twin mirrors both arms from live joint data."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does it run on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The backend is Python standard library only and uses LeRobot's SO101Follower and SO101Leader classes for Feetech STS3215 bus servos. The frontend is plain JavaScript with Three.js for the 3D twin."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it part of LeRobot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. It is a separate add-on built on the open-source LeRobot library and is not endorsed by LeRobot or Hugging Face."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who built it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ajay Ummadi of MakerWorks Lab set the product direction, tested on real hardware and designed the front-end UI. The backend, first UI and 3D digital twin were written with Claude Code."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="bg"><i></i><i></i><i></i></div>
+<nav aria-label="Main"><div class="wrap"><a class="logo" href="../../" style="text-decoration:none">AU.</a>
+<ul><li><a href="../../">Home</a></li><li><a href="../../#projects">Projects</a></li><li><a href="../../#videos">Videos</a></li><li><a href="../../#contact">Contact</a></li></ul></div></nav>
+<main>
+<div class="wrap" style="padding-top:28px"><p class="muted" style="font-size:.88rem"><a href="../../">Ajay Ummadi</a> › <a href="../../#projects">Projects</a> › SO-101 Teleoperation Studio: Web Dashboard &amp; 3D Digital Twin for LeRobot</p></div>
+<section><div class="wrap">
+<p class="eyebrow rv">Featured project</p><h1 class="rv" style="font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em;margin:6px 0 30px">SO-101 Teleoperation Studio</h1>
+<p class="muted rv" style="max-width:740px;margin:-12px 0 20px">A local web app that runs, monitors and visualizes teleoperation of two SO-101 robot arms: a hand-held leader arm controls a follower arm in real time. It sits on top of the open-source LeRobot library, talks to real hardware, and includes a 3D digital twin of both arms built from the official CAD.</p>
+<div class="chips big rv" style="margin:0 0 26px"><span class="chip">Python (stdlib only)</span><span class="chip">LeRobot</span><span class="chip">Feetech STS3215</span><span class="chip">Three.js</span><span class="chip">Vanilla JS</span></div>
+<div class="stats rv" style="margin:0 0 26px">
+<div class="stat"><b>~3,500</b><span>lines across 5 files</span></div>
+<div class="stat"><b>11</b><span>backend endpoints</span></div>
+<div class="stat"><b>5</b><span>app pages</span></div>
+<div class="stat"><b>16</b><span>mesh files (~18 MB)</span></div>
+</div>
+<div class="grid">
+<div class="card rv"><div class="ico">🎮</div><h3>Live teleoperation</h3><p>Start and stop the 60 Hz leader-to-follower loop from the browser, with an emergency stop on Esc.</p></div>
+<div class="card rv"><div class="ico">📊</div><h3>Live telemetry</h3><p>Loop time, rate, uptime and tracking error, with per-joint bars and history graphs for leader, commanded and actual positions.</p></div>
+<div class="card rv"><div class="ico">⏺️</div><h3>Recording and calibration</h3><p>One-click CSV capture at about 30 Hz, plus a calibration manager that never overwrites a working calibration by accident.</p></div>
+<div class="card rv"><div class="ico">🛡️</div><h3>Safety</h3><p>A per-frame step limit for gentler starts, and hardware errors shown in the UI.</p></div>
+<div class="card rv"><div class="ico">🧊</div><h3>3D digital twin</h3><p>Teal leader and white follower arms driven by live joint data, with soft shadows, glossy servos, animated wires, split and ghost-overlay views and camera presets.</p></div>
+<div class="card rv"><div class="ico">📷</div><h3>Modelled from my setup</h3><p>Red C-clamps, the driver board and the handwritten port labels were placed from measurements of the loaded meshes, not guessed.</p></div>
+</div>
+<h3 class="rv" style="margin:36px 0 14px">Engineering highlights</h3>
+<div class="grid">
+<div class="card rv"><h3>Mirrored-arm bug</h3><p>Leader and follower CAD used different base orientations, so the same joint reading turned them in opposite directions. I found it by measuring joint positions in the running 3D scene, then aligned both arms to a shared frame and added an automatic joint-direction check.</p></div>
+<div class="card rv"><h3>Realistic rendering</h3><p>STL files only carry flat normals, so the loader smooths shallow edges and keeps sharp creases, and lighting comes from a procedural studio environment map.</p></div>
+<div class="card rv"><h3>Real-hardware debugging</h3><p>Resolved a missing motor SDK, a calibration mismatch, and two programs competing for one serial port.</p></div>
+</div>
+<p class="muted rv" style="margin-top:24px;max-width:740px"><b>My role:</b> I set the product direction, supplied the real arms and photos, tested everything on my own hardware, and designed and expanded the front-end UI (the "Teleoperation Cockpit" redesign). The backend, first UI and 3D digital twin were written with Claude Code (Anthropic).</p>
+<p class="muted rv" style="margin-top:12px;max-width:740px;font-size:.85rem"><b>Credits:</b> LeRobot by Hugging Face (Apache-2.0); this project is a separate add-on, not part of or endorsed by LeRobot. SO-101 design, URDFs and STL meshes from TheRobotStudio/SO-ARM100 (Apache-2.0). Three.js (MIT).</p>
+</div></section>
+
+
+<section><div class="wrap"><p class="eyebrow rv">FAQ</p><h2 class="rv">Questions</h2><div class="grid" style="grid-template-columns:1fr"><details class="card rv"><summary style="cursor:pointer;font-weight:600">What is the SO-101 Teleoperation Studio?</summary><p style="margin-top:10px">A local web app that runs, monitors and visualizes teleoperation of two SO-101 robot arms. A hand-held leader arm controls a follower arm in real time, and a 3D digital twin mirrors both arms from live joint data.</p></details><details class="card rv"><summary style="cursor:pointer;font-weight:600">What does it run on?</summary><p style="margin-top:10px">The backend is Python standard library only and uses LeRobot's SO101Follower and SO101Leader classes for Feetech STS3215 bus servos. The frontend is plain JavaScript with Three.js for the 3D twin.</p></details><details class="card rv"><summary style="cursor:pointer;font-weight:600">Is it part of LeRobot?</summary><p style="margin-top:10px">No. It is a separate add-on built on the open-source LeRobot library and is not endorsed by LeRobot or Hugging Face.</p></details><details class="card rv"><summary style="cursor:pointer;font-weight:600">Who built it?</summary><p style="margin-top:10px">Ajay Ummadi of MakerWorks Lab set the product direction, tested on real hardware and designed the front-end UI. The backend, first UI and 3D digital twin were written with Claude Code.</p></details></div></div></section>
+<section><div class="wrap"><div class="cta rv"><p class="eyebrow">More</p><h2>Other projects</h2><div class="btns"><a class="btn primary" href="../../">Back to portfolio</a><a class="btn" href="../open-ear-earbuds/">Open-Ear Earbuds</a><a class="btn" href="../lerobot-training-monitor/">Training Monitor</a><a class="btn" href="https://www.linkedin.com/in/ajayummadi/" target="_blank" rel="noopener">LinkedIn</a></div></div></div></section>
+</main>
+<footer><div class="wrap">© <span id="y"></span> <a href="../../">Ajay Ummadi</a> · <a href="mailto:makerworkslab@gmail.com">makerworkslab@gmail.com</a></div></footer>
+<script src="../../site.js"></script>
+</body>
+</html>
