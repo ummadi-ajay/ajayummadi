@@ -8,6 +8,7 @@ I am co-founder and managing partner of [MakerWorks Lab](https://makerworkslab.i
 - **LeRobot SO-101 arms**: an interactive 3D exploded view of the arm I assembled
 - **Open-ear wired earbuds**: 3D-printed earphones around a salvaged driver, with an interactive 3D view
 - **Reachy Mini Companion**: multilingual Gemini Live voice app for Reachy Mini, published on Hugging Face
+- **Reachy Mini**: assembled by hand
 - **LeRobot Training Monitor** and **MakerWorks Lab**
 - My book, *Getting Started with Micro:bit*
 
