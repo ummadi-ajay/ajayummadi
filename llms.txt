@@ -11,7 +11,7 @@ Canonical page: https://makerworkslab.in/ajayummadi/
 
 - MakerWorks Lab: https://makerworkslab.in/ajayummadi/projects/makerworks-lab/
 
-- Reachy Mini: Ajay assembled his own Reachy Mini (open-source expressive desktop robot) and is planning a new app for it to publish on Hugging Face (planned, not released). https://makerworkslab.in/ajayummadi/projects/reachy-mini/
+- Reachy Mini Companion: Ajay assembled his own Reachy Mini (open-source expressive desktop robot) and built Reachy Mini Companion, a multilingual voice app using the Gemini Live API that detects the spoken language and answers in it while moving. Published as a Hugging Face Space (https://huggingface.co/spaces/ummadiajay/reachy_mini_companion), based on Pollen Robotics' Reachy Mini Conversation App (Apache 2.0); not affiliated with Pollen Robotics, Hugging Face or Google. https://makerworkslab.in/ajayummadi/projects/reachy-mini/
 
 - LeRobot SO-101 Arms: Ajay assembled a leader and follower SO-101 pair and published an interactive 3D exploded view of the arm built from the official CAD (Apache-2.0). https://makerworkslab.in/ajayummadi/projects/lerobot-so-101/
 

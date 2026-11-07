@@ -7,7 +7,7 @@ I am co-founder and managing partner of [MakerWorks Lab](https://makerworkslab.i
 - **SO-101 Teleoperation Studio**: a web dashboard and 3D digital twin for LeRobot SO-101 arms
 - **LeRobot SO-101 arms**: an interactive 3D exploded view of the arm I assembled
 - **Open-ear wired earbuds**: 3D-printed earphones around a salvaged driver, with an interactive 3D view
-- **Reachy Mini**: assembled by hand, with a Hugging Face app planned
+- **Reachy Mini Companion**: multilingual Gemini Live voice app for Reachy Mini, published on Hugging Face
 - **LeRobot Training Monitor** and **MakerWorks Lab**
 - My book, *Getting Started with Micro:bit*
 
