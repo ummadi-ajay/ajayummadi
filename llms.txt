@@ -17,7 +17,6 @@ Canonical page: https://makerworkslab.in/ajayummadi/
 
 - Book: "Getting Started with Micro:bit: A Beginner's Guide to Coding, Electronics, and Fun Projects" by Ajay Ummadi, Maker Works Lab, Mumbai, 2025. Read online: https://online.anyflip.com/aogwo/mjyr/index.html. https://makerworkslab.in/ajayummadi/projects/microbit-beginners-guide/
 
-- Web apps and tools (all on GitHub, github.com/ummadi-ajay): EduBill student billing app (React, Firebase), Transaction Ledger finance app (React, Capacitor, Gemini), Nexus Control micro:bit robot dashboard (Web Bluetooth), MakerWorks Lab website, Electronics Component and Kit Tracker, classroom tools (scoreboard, Arduino quiz, attendance).
 
 ## Background
 - Associate Consultant, Atos Syntel (Oct 2022 - Aug 2023): learned Java full-stack development; capstone: a web app to buy and resell books (Java, SQL); completed Microsoft Azure Fundamentals (AZ-900)
