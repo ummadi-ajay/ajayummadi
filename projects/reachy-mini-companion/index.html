@@ -121,6 +121,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../style.css">
 
+<style>
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.shot{margin:0}.shot img{width:100%;height:auto;display:block;border-radius:16px;border:1px solid var(--line);box-shadow:0 20px 50px -25px rgba(15,23,42,.45)}
+.shot figcaption{margin-top:10px;color:var(--muted);font-size:.85rem;text-align:center}.shot figcaption b{color:var(--text)}
+@media(max-width:900px){.shots{grid-template-columns:repeat(2,1fr)}}
+</style>
 </head>
 <body>
 <div class="bg"><i></i><i></i><i></i></div>
@@ -137,6 +143,17 @@
 <section id="app"><div class="wrap">
 <div class="chips big rv" style="margin:0 0 24px"><span class="chip">Gemini Live API</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Hugging Face Space</span><span class="chip">Apache 2.0</span></div>
 <div class="grid"><div class="card rv"><div class="ico">🗣️</div><h3>Speaks your language</h3><p>No language menu: Hindi, Telugu, English, Spanish, French and more are detected automatically, and the robot switches when you do. A language can still be pinned in settings.</p></div><div class="card rv"><div class="ico">🎙️</div><h3>Real-time voice</h3><p>The robot's own microphone streams to the Gemini Live API and the reply plays on its own speaker, with natural head movement while it talks.</p></div><div class="card rv"><div class="ico">👀</div><h3>Sees and moves</h3><p>Camera vision on request, plus expressive dances and emotions inherited from the original Reachy Mini app.</p></div><div class="card rv"><div class="ico">📦</div><h3>Installs like any app</h3><p>Published on Hugging Face, so any Reachy Mini owner can install it from the dashboard's app store and add their own free Gemini key.</p></div><div class="card rv"><div class="ico">🖥️</div><h3>A control page</h3><p>The robot hosts a web page showing live whether Reachy is listening, speaking or needs a key, what it heard and said, with Wake / Sleep buttons and key checking.</p></div><div class="card rv"><div class="ico">🛡️</div><h3>Recovers from errors</h3><p>A bad API key or a playback hiccup no longer kills the app: it shows a clear error and recovers as soon as a corrected key is saved.</p></div></div>
+</div></section>
+
+<section id="screens"><div class="wrap">
+<p class="eyebrow rv">In action</p><h2 class="rv">The settings page, live on the robot</h2>
+<p class="muted rv" style="max-width:760px;margin-bottom:22px">Real screenshots of the control page while talking to Reachy in four languages. It shows whether the robot is listening or speaking, what it heard and what it said, the mic frame and audio chunk counters, and the Wake / Sleep buttons.</p>
+<div class="shots">
+<figure class="rv shot"><img src="settings-hindi.png" width="446" height="679" loading="lazy" alt="Reachy Mini Companion settings page showing a Hindi conversation, status Speaking"><figcaption><b>Hindi</b><br>Asked “क्या चल रहा है?” and answered in Hindi</figcaption></figure>
+<figure class="rv shot"><img src="settings-telugu.png" width="446" height="679" loading="lazy" alt="Reachy Mini Companion settings page showing a Telugu conversation, status Listening"><figcaption><b>Telugu</b><br>Asked “Em chestunnav?” and answered in Telugu</figcaption></figure>
+<figure class="rv shot"><img src="settings-gujarati.png" width="446" height="679" loading="lazy" alt="Reachy Mini Companion settings page showing a Gujarati conversation, status Listening"><figcaption><b>Gujarati</b><br>Asked in Gujarati and answered in Gujarati</figcaption></figure>
+<figure class="rv shot"><img src="settings-marathi.png" width="446" height="679" loading="lazy" alt="Reachy Mini Companion settings page showing a Marathi conversation, status Speaking"><figcaption><b>Marathi</b><br>Asked in Marathi and answered in Marathi</figcaption></figure>
+</div>
 </div></section>
 
 <section><div class="wrap">
@@ -165,7 +182,7 @@
 <section><div class="wrap">
 <p class="eyebrow rv">Status</p><h2 class="rv">What is verified</h2>
 <div class="grid">
-<div class="card rv"><div class="ico">✅</div><h3>Confirmed</h3><p>Gemini Live replies in Telugu, Hindi and Spanish checked directly against the API. On the robot, a live session heard and answered Hindi and Spanish, played audio on the speaker and kept the head level.</p></div>
+<div class="card rv"><div class="ico">✅</div><h3>Confirmed</h3><p>Gemini Live replies in Telugu, Hindi and Spanish checked directly against the API. On the robot, live sessions heard and answered Hindi, Telugu, Gujarati, Marathi and Spanish, played audio on the speaker and kept the head level.</p></div>
 <div class="card rv"><div class="ico">🧪</div><h3>Not yet verified</h3><p>Every pinned-language setting, long conversations, and non-wireless Reachy Mini models.</p></div>
 <div class="card rv"><div class="ico">📲</div><h3>Install</h3><p>In the Reachy Mini dashboard, open Discover apps, search for Reachy Mini Companion and install it. Open its settings page at <code>http://&lt;robot-ip&gt;:7860</code>, paste a free Gemini API key and press Test &amp; save.</p></div>
 </div>
